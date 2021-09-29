@@ -8,6 +8,14 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -31,9 +39,9 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -99,12 +107,31 @@
 			"EnemyFollowJump",
 			"PressurePlateTrigger"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"1x3_Moving_Platformer_H",
+					"1x3_Moving_Platformer_V"
+				],
+				"subfolders": [],
+				"name": "Moving_Platforms"
+			},
+			{
+				"items": [
+					"Coin",
+					"Health_Vial"
+				],
+				"subfolders": [],
+				"name": "Collectibles"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Collectible_Family"
+		],
 		"subfolders": []
 	},
 	"layouts": {
@@ -113,7 +140,8 @@
 			"Luis D Rojas",
 			"Nalah Tinsley",
 			"Raheem Allen",
-			"Sang Nguyen"
+			"Sang Nguyen",
+			"Game Demo Level"
 		],
 		"subfolders": []
 	},
@@ -123,7 +151,8 @@
 			"Event sheet 2",
 			"Event sheet 3",
 			"Event sheet 4",
-			"Event sheet 5"
+			"Event sheet 5",
+			"Game Demo Level Event"
 		],
 		"subfolders": []
 	},
