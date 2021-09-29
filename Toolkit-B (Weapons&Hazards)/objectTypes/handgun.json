@@ -1,0 +1,66 @@
+{
+	"name": "Handgun",
+	"plugin-id": "Sprite",
+	"sid": 487798579737424,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 414006359208952
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 185,
+						"height": 161,
+						"originX": 0.7837837837837838,
+						"originY": 0.2360248447204969,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9386720,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 116765631319553,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 185,
+						"height": 161,
+						"originX": 0.7837837837837838,
+						"originY": 0.2360248447204969,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2936553,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 507429242419868,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
