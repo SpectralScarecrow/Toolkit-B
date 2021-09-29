@@ -1,5 +1,193 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy Fall Code",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 596883468937185
+						}
+					],
+					"actions": [
+						{
+							"id": "set-gravity",
+							"objectClass": "EnemyFall",
+							"sid": 570992972728219,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "0"
+							}
+						}
+					],
+					"sid": 655401323267534
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "EnemyTriggerPoint",
+							"sid": 609058476199488,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "EnemyFall.X - 64"
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "EnemyTriggerPoint",
+							"sid": 602664874827536,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "EnemyFall.X + 64"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-gravity",
+							"objectClass": "EnemyFall",
+							"sid": 822295553104495,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "3000"
+							}
+						}
+					],
+					"sid": 319440889289228
+				}
+			],
+			"sid": 999176343384924
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy Follow Jump Code",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 512112147348958
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "EnemyFollowJump",
+							"sid": 373214957424816,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"enabled": true
+							}
+						}
+					],
+					"sid": 245023350069037
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "EnemyFollowJump",
+							"sid": 506216473602916,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "EnemyTriggerPoint",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-object",
+							"objectClass": "EnemyFollowJump",
+							"sid": 866863926837004,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"object": "EnemyTriggerPoint",
+								"image-point": "0",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 439207410292135
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "EnemyFollowJump",
+							"sid": 958060918445196,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "EnemyTriggerPoint",
+								"image-point": "0"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "EnemyFollowJump",
+							"sid": 230038686010540,
+							"behaviorType": "MoveTo"
+						}
+					],
+					"sid": 305583142347184
+				}
+			],
+			"sid": 643993560780871
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pressure Plate Code",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnemyTriggerPoint",
+							"sid": 871675185419031,
+							"parameters": {
+								"object": "PressurePlate"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PressurePlateSignal",
+							"sid": 101399517755320,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						}
+					],
+					"sid": 100559393279491
+				}
+			],
+			"sid": 968879375685473
+		}
+	],
 	"sid": 935555966946757
 }
