@@ -135,7 +135,8 @@
 			"Handgun",
 			"Hazard2",
 			"Bullet",
-			"Touch"
+			"Touch",
+			"KillPoint"
 		],
 		"subfolders": [
 			{

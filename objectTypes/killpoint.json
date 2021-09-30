@@ -1,21 +1,10 @@
 {
-	"name": "EnemyFall",
+	"name": "KillPoint",
 	"plugin-id": "Sprite",
-	"sid": 453756855074746,
+	"sid": 577445951688109,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Platform",
-			"name": "Platform",
-			"sid": 514004757037792
-		},
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 204498401803033
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -29,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2543847,
+						"imageSpriteId": 6157790,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 140059649779196,
+				"sid": 302526144592244,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
