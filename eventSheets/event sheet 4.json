@@ -1,5 +1,54 @@
 {
 	"name": "Event sheet 4",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 470997669115166,
+					"parameters": {
+						"key": 70
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Handgun",
+					"sid": 528732007758538,
+					"parameters": {
+						"object": "Bullet",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 292688598702515
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Bullet",
+					"sid": 234850156626426
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Bullet",
+					"sid": 945202000819709,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 371360240040517
+		}
+	],
 	"sid": 869879178227861
 }
