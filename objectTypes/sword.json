@@ -1,0 +1,43 @@
+{
+	"name": "Sword",
+	"plugin-id": "Sprite",
+	"sid": 833702733006545,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 342332993391510
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 146,
+						"height": 207,
+						"originX": 0.5136986301369864,
+						"originY": 0.5700483091787439,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2032270,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 418579111374688,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
