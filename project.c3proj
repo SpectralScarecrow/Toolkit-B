@@ -64,6 +64,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "MoveTo",
 			"name": "Move To",
 			"author": "Scirra",
@@ -74,14 +82,6 @@
 			"type": "behavior",
 			"id": "LOS",
 			"name": "Line of sight",
-			"author": "Scirra",
-			"version": "r260",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Pin",
-			"name": "Pin",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -100,7 +100,12 @@
 			"hitBox",
 			"spike",
 			"platform",
-			"Ground"
+			"Ground",
+			"Player",
+			"PressurePlate",
+			"EnemyFall",
+			"EnemyFollowJump",
+			"PressurePlateTrigger"
 		],
 		"subfolders": [
 			{
@@ -118,23 +123,6 @@
 				],
 				"subfolders": [],
 				"name": "Collectibles"
-			},
-			{
-				"items": [
-					"EnemyFall",
-					"EnemyFollowJump"
-				],
-				"subfolders": [],
-				"name": "Enemies"
-			},
-			{
-				"items": [
-					"Player",
-					"PressurePlate",
-					"PressurePlateTrigger"
-				],
-				"subfolders": [],
-				"name": "PressurePlate"
 			}
 		]
 	},
