@@ -64,6 +64,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
@@ -90,14 +98,6 @@
 			"type": "behavior",
 			"id": "LOS",
 			"name": "Line of sight",
-			"author": "Scirra",
-			"version": "r260",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Bullet",
-			"name": "Bullet",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -130,11 +130,6 @@
 			"EnemyFall",
 			"EnemyFollowJump",
 			"PressurePlateTrigger",
-			"Hazard1",
-			"Sword",
-			"Handgun",
-			"Hazard2",
-			"Bullet",
 			"Touch"
 		],
 		"subfolders": [
@@ -153,6 +148,23 @@
 				],
 				"subfolders": [],
 				"name": "Collectibles"
+			},
+			{
+				"items": [
+					"SlimeBullet",
+					"Slingshot",
+					"Sword"
+				],
+				"subfolders": [],
+				"name": "Weapons"
+			},
+			{
+				"items": [
+					"Hazard2",
+					"Tar"
+				],
+				"subfolders": [],
+				"name": "Hazards"
 			}
 		]
 	},

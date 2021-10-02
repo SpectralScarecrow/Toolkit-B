@@ -1,5 +1,5 @@
 {
-	"name": "Bullet",
+	"name": "SlimeBullet",
 	"plugin-id": "Sprite",
 	"sid": 824617267505744,
 	"isGlobal": false,
@@ -22,14 +22,14 @@
 			{
 				"frames": [
 					{
-						"width": 135,
-						"height": 87,
-						"originX": 0.9925925925925926,
-						"originY": 0.5402298850574713,
+						"width": 93,
+						"height": 49,
+						"originX": 1.2150537634408602,
+						"originY": 0.5306122448979592,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5119659,
+						"imageSpriteId": 2779120,
 						"useCollisionPoly": true,
 						"duration": 1
 					}

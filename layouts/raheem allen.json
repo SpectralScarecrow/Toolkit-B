@@ -6,7 +6,7 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "Hazard1",
+					"type": "Tar",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -93,7 +93,7 @@
 					}
 				},
 				{
-					"type": "Handgun",
+					"type": "Slingshot",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -114,10 +114,10 @@
 					"world": {
 						"x": 656.5370129978718,
 						"y": 65.96933246505233,
-						"width": -74.7033654355925,
-						"height": -60.36216185847509,
-						"originX": 0.9297297297297298,
-						"originY": 0.2360248447204969,
+						"width": -31.09275210021958,
+						"height": -42.74090963892025,
+						"originX": 1.5844155844155845,
+						"originY": -0.08771929824561403,
 						"color": [
 							1,
 							1,
@@ -165,7 +165,7 @@
 					}
 				},
 				{
-					"type": "Bullet",
+					"type": "SlimeBullet",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -195,12 +195,12 @@
 						}
 					},
 					"world": {
-						"x": 890,
-						"y": 249,
-						"width": 12.099999999999994,
-						"height": 8.768,
-						"originX": 0.9925925925925926,
-						"originY": 0.5402298850574713,
+						"x": 693.6888888888889,
+						"y": 167.0689655172414,
+						"width": 37.26888888888888,
+						"height": 26.90381609195402,
+						"originX": 1.2150537634408602,
+						"originY": 0.5306122448979592,
 						"color": [
 							1,
 							1,

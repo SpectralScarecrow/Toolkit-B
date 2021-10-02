@@ -16,10 +16,10 @@
 			"actions": [
 				{
 					"id": "spawn-another-object",
-					"objectClass": "Handgun",
+					"objectClass": "Slingshot",
 					"sid": 528732007758538,
 					"parameters": {
-						"object": "Bullet",
+						"object": "SlimeBullet",
 						"layer": "0",
 						"image-point": "0",
 						"create-hierarchy": false
@@ -33,14 +33,14 @@
 			"conditions": [
 				{
 					"id": "on-created",
-					"objectClass": "Bullet",
+					"objectClass": "SlimeBullet",
 					"sid": 234850156626426
 				}
 			],
 			"actions": [
 				{
 					"id": "set-mirrored",
-					"objectClass": "Bullet",
+					"objectClass": "SlimeBullet",
 					"sid": 945202000819709,
 					"parameters": {
 						"state": "mirrored"

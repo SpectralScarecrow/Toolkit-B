@@ -1,5 +1,5 @@
 {
-	"name": "Hazard1",
+	"name": "Tar",
 	"plugin-id": "Sprite",
 	"sid": 135587886942616,
 	"isGlobal": false,
@@ -29,7 +29,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 372663,
+						"imageSpriteId": 380265,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
