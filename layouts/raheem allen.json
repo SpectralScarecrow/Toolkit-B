@@ -57,42 +57,6 @@
 					}
 				},
 				{
-					"type": "Sword",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 27,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"world": {
-						"x": 520,
-						"y": 182,
-						"width": 42.632,
-						"height": 127.512,
-						"originX": 0.5136986301369864,
-						"originY": 0.5700483091787439,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Slingshot",
 					"properties": {
 						"initially-visible": true,
@@ -147,6 +111,21 @@
 							}
 						}
 					},
+					"effects": {
+						"Water": {
+							"parameters": {
+								"speed": 0.1,
+								"x-speed": 0.3,
+								"y-speed": 0.3,
+								"intensity": 3,
+								"frequency": 4,
+								"angle": 7,
+								"delta": 20,
+								"reflectivity": 400,
+								"emboss": 0.3
+							}
+						}
+					},
 					"world": {
 						"x": 127,
 						"y": 181,
@@ -195,8 +174,8 @@
 						}
 					},
 					"world": {
-						"x": 693.6888888888889,
-						"y": 167.0689655172414,
+						"x": 918,
+						"y": 30,
 						"width": 37.26888888888888,
 						"height": 26.90381609195402,
 						"originX": 1.2150537634408602,

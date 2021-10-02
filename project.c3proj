@@ -152,8 +152,7 @@
 			{
 				"items": [
 					"SlimeBullet",
-					"Slingshot",
-					"Sword"
+					"Slingshot"
 				],
 				"subfolders": [],
 				"name": "Weapons"

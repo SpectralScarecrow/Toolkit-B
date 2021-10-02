@@ -11,7 +11,12 @@
 			"sid": 321194388858042
 		}
 	],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "water",
+			"name": "Water"
+		}
+	],
 	"animations": {
 		"items": [
 			{
@@ -24,7 +29,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5860559,
+						"imageSpriteId": 538725,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
