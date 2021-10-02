@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD:objectTypes/slingshot.json
 	"name": "Slingshot",
 	"plugin-id": "Sprite",
 	"sid": 903028532381712,
@@ -12,14 +11,6 @@
 			"sid": 258187823057365
 		}
 	],
-=======
-	"name": "KillPoint",
-	"plugin-id": "Sprite",
-	"sid": 577445951688109,
-	"isGlobal": false,
-	"instanceVariables": [],
-	"behaviorTypes": [],
->>>>>>> 1f6269f5674479a39bbeffcfcb61579fee7669eb:objectTypes/killpoint.json
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -33,7 +24,6 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-<<<<<<< HEAD:objectTypes/slingshot.json
 						"imageSpriteId": 4065535,
 						"collisionPoly": {
 							"points": [
@@ -47,18 +37,11 @@
 								0.9912280701754386
 							]
 						},
-=======
-						"imageSpriteId": 6157790,
->>>>>>> 1f6269f5674479a39bbeffcfcb61579fee7669eb:objectTypes/killpoint.json
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-<<<<<<< HEAD:objectTypes/slingshot.json
 				"sid": 172985781881284,
-=======
-				"sid": 302526144592244,
->>>>>>> 1f6269f5674479a39bbeffcfcb61579fee7669eb:objectTypes/killpoint.json
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

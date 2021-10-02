@@ -1,5 +1,5 @@
 {
-	"name": "Hazard2",
+	"name": "Acid",
 	"plugin-id": "Sprite",
 	"sid": 827878125819686,
 	"isGlobal": false,
@@ -29,7 +29,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 538725,
+						"imageSpriteId": 457973,
 						"useCollisionPoly": true,
 						"duration": 1
 					}

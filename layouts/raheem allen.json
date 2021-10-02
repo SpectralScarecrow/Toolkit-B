@@ -93,7 +93,7 @@
 					}
 				},
 				{
-					"type": "Hazard2",
+					"type": "Acid",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
