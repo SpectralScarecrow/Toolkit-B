@@ -1,0 +1,379 @@
+{
+	"name": "Combined Sheet",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pressure Plate Script",
+			"description": "This is Joey's code.",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 217838158606271,
+							"parameters": {
+								"object": "PressurePlate"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PressurePlateTrigger",
+							"sid": 798972896022575,
+							"parameters": {
+								"visibility": "toggle"
+							}
+						}
+					],
+					"sid": 561993867637243
+				}
+			],
+			"sid": 379522010472795
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy Follow Script",
+			"description": "This is Joey's code.",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "EnemyFollowJump",
+							"sid": 349087959636190,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Player",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-position",
+							"objectClass": "EnemyFollowJump",
+							"sid": 515440411969787,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "Player.X",
+								"y": "0",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 865876232431422
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "EnemyFollowJump",
+							"sid": 816002806696814,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Player",
+								"image-point": "0"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "EnemyFollowJump",
+							"sid": 764035778956278,
+							"behaviorType": "MoveTo"
+						}
+					],
+					"sid": 428922317149670
+				}
+			],
+			"sid": 941143603904103
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy Fall Script",
+			"description": "This is Joey's code.",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Player",
+							"sid": 642008739114700,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "EnemyFall.X - 64"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-gravity",
+							"objectClass": "EnemyFall",
+							"sid": 638611456755323,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "3000"
+							}
+						}
+					],
+					"sid": 318678689874785
+				}
+			],
+			"sid": 487533198651078
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Moving Box Script",
+			"description": "This is Nalah's code.",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 242134413145223
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "hitBox",
+							"sid": 909760526194457,
+							"parameters": {
+								"object": "temp_player",
+								"image-point-optional": "1"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "hitBox",
+							"sid": 514487252478952,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "temp_player",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 199112115522785
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "hitBox",
+							"sid": 901671211130190,
+							"parameters": {
+								"object": "box"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "hitBox",
+							"sid": 435297106538731,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "box.Y"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 205241489066272,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "temp_player",
+									"sid": 668558880586362,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "box.X"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 922880177232659,
+									"parameters": {
+										"key": 37
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "box",
+									"sid": 564146731959406,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 950999924974319
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "temp_player",
+									"sid": 463056147955137,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "box.X"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 872366092525764,
+									"parameters": {
+										"key": 39
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "box",
+									"sid": 485320379945726,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 569391127874023
+						}
+					]
+				}
+			],
+			"sid": 305962351160166
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Spike Trap",
+			"description": "This is Nalah's code.",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "temp_player",
+							"sid": 422861517955396,
+							"parameters": {
+								"object": "spike"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 601441670540942
+						}
+					],
+					"sid": 333276546998924
+				}
+			],
+			"sid": 977944410724031
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Slingshot and Slime Bullet Script",
+			"description": "This is Raheem's code.",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 606120774018029,
+							"parameters": {
+								"key": 70
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Slingshot",
+							"sid": 641648660249417,
+							"parameters": {
+								"object": "SlimeBullet",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 368756234213597
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "SlimeBullet",
+							"sid": 452430515811520
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "SlimeBullet",
+							"sid": 985579513851857,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 402367139880754
+				}
+			],
+			"sid": 464263342794773
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Collectible Family Scripts",
+			"description": "This is Sang's code.",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 311483450890113
+		}
+	],
+	"sid": 343251894526628
+}
