@@ -157,7 +157,7 @@
 							"objectClass": "hitBox",
 							"sid": 909760526194457,
 							"parameters": {
-								"object": "temp_player",
+								"object": "Player_sprite",
 								"image-point-optional": "1"
 							}
 						},
@@ -167,7 +167,7 @@
 							"sid": 514487252478952,
 							"behaviorType": "Pin",
 							"parameters": {
-								"pin-to": "temp_player",
+								"pin-to": "Player_sprite",
 								"x": true,
 								"y": true,
 								"angle": true,
@@ -208,7 +208,7 @@
 							"conditions": [
 								{
 									"id": "compare-x",
-									"objectClass": "temp_player",
+									"objectClass": "Player_sprite",
 									"sid": 668558880586362,
 									"parameters": {
 										"comparison": 4,
@@ -242,7 +242,7 @@
 							"conditions": [
 								{
 									"id": "compare-x",
-									"objectClass": "temp_player",
+									"objectClass": "Player_sprite",
 									"sid": 463056147955137,
 									"parameters": {
 										"comparison": 2,
@@ -288,7 +288,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "temp_player",
+							"objectClass": "Player_sprite",
 							"sid": 422861517955396,
 							"parameters": {
 								"object": "spike"
@@ -367,7 +367,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "temp_player",
+							"objectClass": "Player_sprite",
 							"sid": 814133947619669,
 							"parameters": {
 								"object": "Slingshot"
@@ -377,7 +377,7 @@
 					"actions": [
 						{
 							"id": "destroy",
-							"objectClass": "temp_player",
+							"objectClass": "Player_sprite",
 							"sid": 129607183458419
 						},
 						{
