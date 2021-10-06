@@ -337,30 +337,18 @@
 								"image-point": "0",
 								"create-hierarchy": false
 							}
-						}
-					],
-					"sid": 368756234213597
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+						},
 						{
-							"id": "is-mirrored",
+							"id": "set-animation",
 							"objectClass": "PlayerwithSlingshot",
-							"sid": 855313343252365
-						}
-					],
-					"actions": [
-						{
-							"id": "set-angle",
-							"objectClass": "SlimeBullet",
-							"sid": 104838615653992,
+							"sid": 278496504724122,
 							"parameters": {
-								"angle": "180"
+								"animation": "\"Animation 3\"",
+								"from": "current-frame"
 							}
 						}
 					],
-					"sid": 402367139880754
+					"sid": 368756234213597
 				},
 				{
 					"eventType": "block",
@@ -447,6 +435,76 @@
 						}
 					],
 					"sid": 668820814948159
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "PlayerwithSlingshot",
+							"sid": 468889766988454
+						}
+					],
+					"actions": [
+						{
+							"id": "set-size",
+							"objectClass": "PlayerwithSlingshot",
+							"sid": 176684315592390,
+							"parameters": {
+								"width": "-53",
+								"height": "-42"
+							}
+						}
+					],
+					"sid": 893917729733293
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "PlayerwithSlingshot",
+							"sid": 101961279332514
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "SlimeBullet",
+							"sid": 416051052824725,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 415445609341694
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "SlimeBullet",
+							"sid": 153277481189042
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 329026684499959,
+							"parameters": {
+								"seconds": "1.5"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SlimeBullet",
+							"sid": 852646796634908
+						}
+					],
+					"sid": 140065551553519
 				}
 			],
 			"sid": 464263342794773
