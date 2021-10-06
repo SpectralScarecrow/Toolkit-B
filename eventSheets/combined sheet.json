@@ -701,6 +701,137 @@
 							"sid": 569391127874023
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 906304019189779
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "hitBox",
+							"sid": 170832274356571,
+							"parameters": {
+								"object": "PlayerwithSlingshot",
+								"image-point-optional": "1"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "hitBox",
+							"sid": 897760778019703,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "PlayerwithSlingshot",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 194411127322936
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "hitBox",
+							"sid": 442701911211853,
+							"parameters": {
+								"object": "box"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "hitBox",
+							"sid": 121570865433713,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "box.Y"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 482531157724895,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "PlayerwithSlingshot",
+									"sid": 154870972349217,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "box.X"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 383087916328423,
+									"parameters": {
+										"key": 37
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "box",
+									"sid": 773879928918134,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 264412887083627
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "PlayerwithSlingshot",
+									"sid": 939603166340914,
+									"parameters": {
+										"comparison": 2,
+										"x-co-ordinate": "box.X"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 773934450364877,
+									"parameters": {
+										"key": 39
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "box",
+									"sid": 610572844081853,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 917033370136813
+						}
+					]
 				}
 			],
 			"sid": 305962351160166
@@ -1144,6 +1275,56 @@
 					],
 					"sid": 342388013500310,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_sprite",
+							"sid": 729114344473024,
+							"parameters": {
+								"object": "Apple_HP_and_Score_Tracker"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Apple_HP_and_Score_Tracker",
+							"sid": 763793538663637
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 729916000571230,
+							"parameters": {
+								"audio-file": "Pickup",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"Apple Pick Up\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 737262276202462,
+							"parameters": {
+								"variable": "Player_Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 549256902410117,
+							"parameters": {
+								"variable": "Score",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 721491129932137
 				},
 				{
 					"eventType": "block",
