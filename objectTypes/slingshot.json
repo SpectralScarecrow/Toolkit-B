@@ -1,16 +1,10 @@
 {
 	"name": "Slingshot",
 	"plugin-id": "Sprite",
-	"sid": 903028532381712,
+	"sid": 456511300568718,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 258187823057365
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -19,65 +13,38 @@
 					{
 						"width": 77,
 						"height": 114,
-						"originX": 1.5844155844155845,
-						"originY": -0.08771929824561403,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4065535,
+						"imageSpriteId": 2384244,
 						"collisionPoly": {
 							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0.9912280701754386,
-								0,
-								0.9912280701754386
+								0.05194805194805195,
+								0.03508771929824561,
+								0.5,
+								0.017543859649122806,
+								0.948051948051948,
+								0.02631578947368421,
+								0.6493506493506493,
+								0.5,
+								0.5454545454545454,
+								0.6929824561403509,
+								0.5,
+								0.9649122807017544,
+								0.2857142857142857,
+								0.7982456140350878,
+								0.2077922077922078,
+								0.5
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 172985781881284,
+				"sid": 419424171237609,
 				"name": "Animation 1",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 5
-			},
-			{
-				"frames": [
-					{
-						"width": 79,
-						"height": 115,
-						"originX": 1.5696202531645569,
-						"originY": -0.0782608695652174,
-						"originalSource": "",
-						"exportFormat": "png",
-						"exportQuality": 0.8,
-						"imageSpriteId": 7193432,
-						"collisionPoly": {
-							"points": [
-								0.02531645569620253,
-								0.017391304347826087,
-								1,
-								0.017391304347826087,
-								1,
-								0.991304347826087,
-								0.02531645569620253,
-								0.991304347826087
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1
-					}
-				],
-				"sid": 160178533297208,
-				"name": "Animation 2",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

@@ -329,7 +329,7 @@
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "Slingshot",
+							"objectClass": "PlayerwithSlingshot",
 							"sid": 641648660249417,
 							"parameters": {
 								"object": "SlimeBullet",
@@ -345,22 +345,108 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-created",
+							"id": "is-mirrored",
+							"objectClass": "PlayerwithSlingshot",
+							"sid": 855313343252365
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
 							"objectClass": "SlimeBullet",
-							"sid": 452430515811520
+							"sid": 104838615653992,
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 402367139880754
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "temp_player",
+							"sid": 814133947619669,
+							"parameters": {
+								"object": "Slingshot"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "temp_player",
+							"sid": 129607183458419
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Slingshot",
+							"sid": 753314382861454
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 227340883217841,
+							"parameters": {
+								"object-to-create": "PlayerwithSlingshot",
+								"layer": "0",
+								"x": "368",
+								"y": "341",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 134815219525749
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 106458118612897,
+							"parameters": {
+								"key": 37
+							}
 						}
 					],
 					"actions": [
 						{
 							"id": "set-mirrored",
-							"objectClass": "SlimeBullet",
-							"sid": 985579513851857,
+							"objectClass": "PlayerwithSlingshot",
+							"sid": 960155833649597,
 							"parameters": {
 								"state": "mirrored"
 							}
 						}
 					],
-					"sid": 402367139880754
+					"sid": 892276637579795
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 193776334559648,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "PlayerwithSlingshot",
+							"sid": 870516355181520,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 668820814948159
 				}
 			],
 			"sid": 464263342794773

@@ -57,7 +57,7 @@
 					}
 				},
 				{
-					"type": "Slingshot",
+					"type": "PlayerwithSlingshot",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -73,15 +73,29 @@
 								"enabled": true,
 								"tags": ""
 							}
+						},
+						"Platform": {
+							"properties": {
+								"max-speed": 330,
+								"acceleration": 1500,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": true,
+								"enabled": true
+							}
 						}
 					},
 					"world": {
-						"x": 660.0253739497923,
-						"y": 62.08261792501912,
-						"width": -33.30797534971083,
-						"height": -46.296362267737805,
-						"originX": 1.5844155844155845,
-						"originY": -0.08771929824561403,
+						"x": 592,
+						"y": 200,
+						"width": -130.6364747482165,
+						"height": -82.84612195279396,
+						"originX": 0.8774834437086093,
+						"originY": 0.05392156862745098,
 						"color": [
 							1,
 							1,
@@ -164,12 +178,6 @@
 								"set-angle": false,
 								"step": false,
 								"enabled": true
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
 							}
 						}
 					},
