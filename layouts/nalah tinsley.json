@@ -6,7 +6,7 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "bg",
+					"type": "Background_Art",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -167,6 +167,11 @@
 								"default-controls": true,
 								"enabled": true
 							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
 						}
 					},
 					"world": {
@@ -308,7 +313,7 @@
 					}
 				},
 				{
-					"type": "platform",
+					"type": "Static_Platform",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -394,7 +399,7 @@
 					}
 				},
 				{
-					"type": "platform",
+					"type": "Static_Platform",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",

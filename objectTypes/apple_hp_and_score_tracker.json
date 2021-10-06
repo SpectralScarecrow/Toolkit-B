@@ -1,21 +1,10 @@
 {
-	"name": "1x3_Moving_Platformer_V",
+	"name": "Apple_HP_and_Score_Tracker",
 	"plugin-id": "Sprite",
-	"sid": 852242981149774,
+	"sid": 171581636326160,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Sin",
-			"name": "Sine",
-			"sid": 373811625907332
-		},
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 948998454742761
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -29,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8231105,
+						"imageSpriteId": 7727447,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 930644777671405,
+				"sid": 370505171677331,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

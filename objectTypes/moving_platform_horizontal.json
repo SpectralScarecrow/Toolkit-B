@@ -1,14 +1,19 @@
 {
-	"name": "platform",
+	"name": "Moving_Platform_Horizontal",
 	"plugin-id": "Sprite",
-	"sid": 257830518118768,
+	"sid": 581796306254329,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 502654517800590
+			"sid": 739450552238338
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 877463874101469
 		}
 	],
 	"effectTypes": [],
@@ -24,7 +29,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5568954,
+						"imageSpriteId": 1469961,
 						"collisionPoly": {
 							"points": [
 								0.38169257340241797,
@@ -49,7 +54,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 906394966241270,
+				"sid": 874821474262245,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

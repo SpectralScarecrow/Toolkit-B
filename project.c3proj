@@ -16,6 +16,14 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -32,14 +40,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Audio",
-			"name": "Audio",
-			"author": "Scirra",
-			"version": "r260",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
@@ -47,9 +47,9 @@
 			"bundled": false
 		},
 		{
-			"type": "behavior",
-			"id": "Sin",
-			"name": "Sine",
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -58,6 +58,14 @@
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -96,6 +104,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
@@ -114,36 +130,30 @@
 	"uniqueId": "hda4p085pyy",
 	"objectTypes": {
 		"items": [
-			"Keyboard",
-			"Mouse",
-			"Audio",
-			"bg",
+			"Background_Art",
 			"walls",
 			"Player_sprite",
 			"box",
 			"hitBox",
-			"spike",
-			"platform",
+			"Static_Platform",
 			"Ground",
 			"Player",
 			"PressurePlate",
 			"PressurePlateTrigger",
-			"Touch",
 			"Slingshot"
 		],
 		"subfolders": [
 			{
 				"items": [
-					"1x3_Moving_Platformer_H",
-					"1x3_Moving_Platformer_V"
+					"Moving_Platform_Horizontal",
+					"Moving_Platform_Vertical"
 				],
 				"subfolders": [],
 				"name": "Moving_Platforms"
 			},
 			{
 				"items": [
-					"Coin",
-					"Health_Vial"
+					"Apple_HP_and_Score_Tracker"
 				],
 				"subfolders": [],
 				"name": "Collectibles"
@@ -159,7 +169,8 @@
 			{
 				"items": [
 					"Acid",
-					"Tar"
+					"Tar",
+					"spike"
 				],
 				"subfolders": [],
 				"name": "Hazards"
@@ -171,6 +182,26 @@
 				],
 				"subfolders": [],
 				"name": "Enemies"
+			},
+			{
+				"items": [
+					"Audio",
+					"Keyboard",
+					"Mouse",
+					"Touch"
+				],
+				"subfolders": [],
+				"name": "Misc"
+			},
+			{
+				"items": [
+					"Display_HP_Value",
+					"Display_Score_Value",
+					"Display_For_Description",
+					"Display_For_Description2"
+				],
+				"subfolders": [],
+				"name": "HUD"
 			}
 		]
 	},
@@ -178,7 +209,6 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Collectible_Family",
 			"Enemy_Family"
 		],
 		"subfolders": []
@@ -188,7 +218,6 @@
 			"Joey McGuane",
 			"Nalah Tinsley",
 			"Raheem Allen",
-			"Sang Nguyen",
 			"Game Demo Level"
 		],
 		"subfolders": []
@@ -205,7 +234,13 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Pickup.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 955075501243232
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

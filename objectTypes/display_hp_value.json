@@ -1,0 +1,9 @@
+{
+	"name": "Display_HP_Value",
+	"plugin-id": "Text",
+	"sid": 437302693990057,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

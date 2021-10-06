@@ -2,6 +2,26 @@
 	"name": "Combined Sheet",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Player_Health",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "This variable tracks the player's Health level, if it reaches 0 then the player dies. There's no maximum limit besides this starting at 3.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 852814367451379
+		},
+		{
+			"eventType": "variable",
+			"name": "Score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "This variable tracks the amount of 'Apples' the player has collected as a means of keeping score. If you wish to ignore this score mechanic, do not use the text UI that corresponds to this variable.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 206319704048161
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Pressure Plate Script",
@@ -512,10 +532,129 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Collectible Family Scripts",
-			"description": "This is Sang's code.",
+			"title": "Collectibles (Apples)",
+			"description": "This is Sang's code.\n\nThis script is for enabling the player sprite to interact with the Apples to heal itself and to keep score of collected apples. If you prefer to change the apple art to something else, you are welcome to.",
 			"isActiveOnStart": true,
-			"children": [],
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 896449068556023
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 442930990429460,
+							"parameters": {
+								"variable": "Player_Health",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 918006771667122,
+							"parameters": {
+								"variable": "Score",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 312383730914081
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_sprite",
+							"sid": 705380665675276,
+							"parameters": {
+								"object": "Apple_HP_and_Score_Tracker"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerwithSlingshot",
+							"sid": 787477424523051,
+							"parameters": {
+								"object": "Apple_HP_and_Score_Tracker"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Apple_HP_and_Score_Tracker",
+							"sid": 286289255358955
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 941019504291524,
+							"parameters": {
+								"audio-file": "Pickup",
+								"loop": "not-looping",
+								"volume": "-5",
+								"tag-optional": "\"Apple Pick Up\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 540912665127245,
+							"parameters": {
+								"variable": "Player_Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 999575744419137,
+							"parameters": {
+								"variable": "Score",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 342388013500310
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 297301504949657
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Display_HP_Value",
+							"sid": 213588498759708,
+							"parameters": {
+								"text": "Player_Health"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Display_Score_Value",
+							"sid": 996332980234450,
+							"parameters": {
+								"text": "Score"
+							}
+						}
+					],
+					"sid": 849705656201708
+				}
+			],
 			"sid": 311483450890113
 		}
 	],
