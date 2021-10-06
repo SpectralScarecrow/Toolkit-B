@@ -428,6 +428,14 @@
 							"parameters": {
 								"state": "mirrored"
 							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "SlimeBullet",
+							"sid": 640437912770412,
+							"parameters": {
+								"state": "not-mirrored"
+							}
 						}
 					],
 					"sid": 892276637579795
@@ -525,6 +533,116 @@
 						}
 					],
 					"sid": 140065551553519
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player_sprite",
+							"sid": 310478550034706,
+							"parameters": {
+								"object": "Acid"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 686641279562094
+						}
+					],
+					"sid": 772382011163849
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player_sprite",
+							"sid": 438319925840749,
+							"parameters": {
+								"object": "Tar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 265625406861353
+						}
+					],
+					"sid": 385330099042893
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerwithSlingshot",
+							"sid": 744041834293861,
+							"parameters": {
+								"object": "Acid"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 664380612143858
+						}
+					],
+					"sid": 325435643598716
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerwithSlingshot",
+							"sid": 168505643801519,
+							"parameters": {
+								"object": "Tar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 392762380967126
+						}
+					],
+					"sid": 325612194943883
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "SlimeBullet",
+							"sid": 884841171961577
+						},
+						{
+							"id": "is-mirrored",
+							"objectClass": "PlayerwithSlingshot",
+							"sid": 817711746508554
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "SlimeBullet",
+							"sid": 196574051640049,
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 747930217224230
 				}
 			],
 			"sid": 464263342794773
