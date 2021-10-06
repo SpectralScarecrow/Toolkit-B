@@ -1099,16 +1099,8 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Player_sprite",
-							"sid": 722723504528460,
-							"parameters": {
-								"object": "Apple_HP_and_Score_Tracker"
-							}
-						},
-						{
-							"id": "is-overlapping-another-object",
 							"objectClass": "PlayerwithSlingshot",
-							"sid": 787477424523051,
+							"sid": 132725160298773,
 							"parameters": {
 								"object": "Apple_HP_and_Score_Tracker"
 							}
@@ -1150,7 +1142,8 @@
 							}
 						}
 					],
-					"sid": 342388013500310
+					"sid": 342388013500310,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
