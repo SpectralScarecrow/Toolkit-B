@@ -1,0 +1,11 @@
+{
+	"name": "Enemy_Family",
+	"plugin-id": "Sprite",
+	"sid": 521997304704016,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"DanielRadcliffe"
+	]
+}

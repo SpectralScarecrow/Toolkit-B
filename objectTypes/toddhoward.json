@@ -1,14 +1,19 @@
 {
-	"name": "Player_sprite",
+	"name": "ToddHoward",
 	"plugin-id": "Sprite",
-	"sid": 628764435302813,
+	"sid": 453756855074746,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Platform",
 			"name": "Platform",
-			"sid": 679666138214438
+			"sid": 497036427489538
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 959824251259226
 		}
 	],
 	"effectTypes": [],
@@ -17,39 +22,31 @@
 			{
 				"frames": [
 					{
-						"width": 275,
-						"height": 180,
-						"originX": 0.38029405674052585,
-						"originY": 0.7941210441210441,
+						"width": 278,
+						"height": 264,
+						"originX": 1.3381294964028776,
+						"originY": 0.5833333333333334,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 958488,
+						"imageSpriteId": 2165494,
 						"collisionPoly": {
 							"points": [
-								0,
-								0,
-								0.38029405674052585,
-								0,
-								1,
-								0.15887040887040896,
-								1,
-								0.7941210441210441,
-								1,
-								1,
-								0.38029405674052585,
-								1,
-								0,
-								1,
-								0,
-								0.7941210441210441
+								0.007194244604316547,
+								0.12878787878787878,
+								0.9892086330935251,
+								0.5833333333333334,
+								0.06474820143884892,
+								0.9734848484848485,
+								0.007194244604316547,
+								0.5833333333333334
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 390864672116725,
+				"sid": 140059649779196,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
@@ -60,31 +57,31 @@
 			{
 				"frames": [
 					{
-						"width": 286,
-						"height": 147,
-						"originX": 0.40559440559440557,
-						"originY": 0.40816326530612246,
+						"width": 247,
+						"height": 119,
+						"originX": 0.4574898785425101,
+						"originY": 0.36134453781512604,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8907806,
+						"imageSpriteId": 737820,
 						"collisionPoly": {
 							"points": [
-								0.40559440559440557,
-								0.02040816326530612,
-								0.965034965034965,
-								0.40816326530612246,
-								0.40559440559440557,
-								0.9795918367346939,
-								0.013986013986013986,
-								0.40816326530612246
+								0.4574898785425101,
+								0.01680672268907563,
+								0.9919028340080972,
+								0.36134453781512604,
+								0.4574898785425101,
+								0.9831932773109243,
+								0.008097165991902834,
+								0.36134453781512604
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 813948950463616,
+				"sid": 214440695036129,
 				"name": "Animation 2",
 				"isLooping": false,
 				"isPingPong": false,

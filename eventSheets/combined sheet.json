@@ -47,7 +47,7 @@
 					"conditions": [
 						{
 							"id": "has-los-to-object",
-							"objectClass": "EnemyFollowJump",
+							"objectClass": "DanielRadcliffe",
 							"sid": 349087959636190,
 							"behaviorType": "LineOfSight",
 							"parameters": {
@@ -59,7 +59,7 @@
 					"actions": [
 						{
 							"id": "move-to-position",
-							"objectClass": "EnemyFollowJump",
+							"objectClass": "DanielRadcliffe",
 							"sid": 515440411969787,
 							"behaviorType": "MoveTo",
 							"parameters": {
@@ -76,7 +76,7 @@
 					"conditions": [
 						{
 							"id": "has-los-to-object",
-							"objectClass": "EnemyFollowJump",
+							"objectClass": "DanielRadcliffe",
 							"sid": 816002806696814,
 							"behaviorType": "LineOfSight",
 							"parameters": {
@@ -89,7 +89,7 @@
 					"actions": [
 						{
 							"id": "stop",
-							"objectClass": "EnemyFollowJump",
+							"objectClass": "DanielRadcliffe",
 							"sid": 764035778956278,
 							"behaviorType": "MoveTo"
 						}
@@ -115,14 +115,14 @@
 							"sid": 642008739114700,
 							"parameters": {
 								"comparison": 4,
-								"x-co-ordinate": "EnemyFall.X - 64"
+								"x-co-ordinate": "ToddHoward.X - 64"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "set-gravity",
-							"objectClass": "EnemyFall",
+							"objectClass": "ToddHoward",
 							"sid": 638611456755323,
 							"behaviorType": "Platform",
 							"parameters": {

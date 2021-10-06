@@ -80,14 +80,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Pin",
-			"name": "Pin",
-			"author": "Scirra",
-			"version": "r260",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "MoveTo",
 			"name": "Move To",
 			"author": "Scirra",
@@ -98,6 +90,14 @@
 			"type": "behavior",
 			"id": "LOS",
 			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
@@ -127,8 +127,6 @@
 			"Ground",
 			"Player",
 			"PressurePlate",
-			"EnemyFall",
-			"EnemyFollowJump",
 			"PressurePlateTrigger",
 			"Touch",
 			"Slingshot"
@@ -165,6 +163,14 @@
 				],
 				"subfolders": [],
 				"name": "Hazards"
+			},
+			{
+				"items": [
+					"ToddHoward",
+					"DanielRadcliffe"
+				],
+				"subfolders": [],
+				"name": "Enemies"
 			}
 		]
 	},
@@ -172,7 +178,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Collectible_Family"
+			"Collectible_Family",
+			"Enemy_Family"
 		],
 		"subfolders": []
 	},
