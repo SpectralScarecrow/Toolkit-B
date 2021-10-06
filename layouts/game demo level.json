@@ -2,7 +2,7 @@
 	"name": "Game Demo Level",
 	"layers": [
 		{
-			"name": "Layer 0",
+			"name": "Game Level",
 			"overriden": 0,
 			"instances": [
 				{
@@ -35,7 +35,7 @@
 					}
 				},
 				{
-					"type": "temp_player",
+					"type": "Player_sprite",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -64,10 +64,10 @@
 					"world": {
 						"x": 77,
 						"y": 325,
-						"width": 56.00000000000001,
-						"height": 45,
-						"originX": 0.45558086560364464,
-						"originY": 0.5758835758835759,
+						"width": 35.07972665148064,
+						"height": 16.839916839916842,
+						"originX": 0.38029405674052585,
+						"originY": 0.7941210441210441,
 						"color": [
 							1,
 							1,
@@ -79,7 +79,7 @@
 					}
 				},
 				{
-					"type": "Ground",
+					"type": "platform",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -87,7 +87,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 34,
+					"uid": 27,
 					"instanceVariables": {},
 					"behaviors": {
 						"Solid": {
@@ -98,12 +98,12 @@
 						}
 					},
 					"world": {
-						"x": 425,
-						"y": 420,
-						"width": 864,
-						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 100,
+						"y": 373,
+						"width": 259,
+						"height": 62,
+						"originX": 0.45768566493955093,
+						"originY": 0.527027027027027,
 						"color": [
 							1,
 							1,
@@ -236,7 +236,7 @@
 	"sid": 384471086845114,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 1708,
+	"width": 854,
 	"height": 480,
 	"unboundedScrolling": false,
 	"vpX": 0.5,

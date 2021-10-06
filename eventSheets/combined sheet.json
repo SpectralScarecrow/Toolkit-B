@@ -47,7 +47,7 @@
 					"conditions": [
 						{
 							"id": "has-los-to-object",
-							"objectClass": "EnemyFollowJump",
+							"objectClass": "DanielRadcliffe",
 							"sid": 349087959636190,
 							"behaviorType": "LineOfSight",
 							"parameters": {
@@ -59,7 +59,7 @@
 					"actions": [
 						{
 							"id": "move-to-position",
-							"objectClass": "EnemyFollowJump",
+							"objectClass": "DanielRadcliffe",
 							"sid": 515440411969787,
 							"behaviorType": "MoveTo",
 							"parameters": {
@@ -76,7 +76,7 @@
 					"conditions": [
 						{
 							"id": "has-los-to-object",
-							"objectClass": "EnemyFollowJump",
+							"objectClass": "DanielRadcliffe",
 							"sid": 816002806696814,
 							"behaviorType": "LineOfSight",
 							"parameters": {
@@ -89,7 +89,7 @@
 					"actions": [
 						{
 							"id": "stop",
-							"objectClass": "EnemyFollowJump",
+							"objectClass": "DanielRadcliffe",
 							"sid": 764035778956278,
 							"behaviorType": "MoveTo"
 						}
@@ -115,14 +115,14 @@
 							"sid": 642008739114700,
 							"parameters": {
 								"comparison": 4,
-								"x-co-ordinate": "EnemyFall.X - 64"
+								"x-co-ordinate": "ToddHoward.X - 64"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "set-gravity",
-							"objectClass": "EnemyFall",
+							"objectClass": "ToddHoward",
 							"sid": 638611456755323,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -157,7 +157,7 @@
 							"objectClass": "hitBox",
 							"sid": 909760526194457,
 							"parameters": {
-								"object": "temp_player",
+								"object": "Player_sprite",
 								"image-point-optional": "1"
 							}
 						},
@@ -167,7 +167,7 @@
 							"sid": 514487252478952,
 							"behaviorType": "Pin",
 							"parameters": {
-								"pin-to": "temp_player",
+								"pin-to": "Player_sprite",
 								"x": true,
 								"y": true,
 								"angle": true,
@@ -208,7 +208,7 @@
 							"conditions": [
 								{
 									"id": "compare-x",
-									"objectClass": "temp_player",
+									"objectClass": "Player_sprite",
 									"sid": 668558880586362,
 									"parameters": {
 										"comparison": 4,
@@ -242,7 +242,7 @@
 							"conditions": [
 								{
 									"id": "compare-x",
-									"objectClass": "temp_player",
+									"objectClass": "Player_sprite",
 									"sid": 463056147955137,
 									"parameters": {
 										"comparison": 2,
@@ -288,7 +288,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "temp_player",
+							"objectClass": "Player_sprite",
 							"sid": 422861517955396,
 							"parameters": {
 								"object": "spike"
@@ -355,7 +355,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "temp_player",
+							"objectClass": "Player_sprite",
 							"sid": 814133947619669,
 							"parameters": {
 								"object": "Slingshot"
@@ -365,7 +365,7 @@
 					"actions": [
 						{
 							"id": "destroy",
-							"objectClass": "temp_player",
+							"objectClass": "Player_sprite",
 							"sid": 129607183458419
 						},
 						{

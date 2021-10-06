@@ -1,0 +1,95 @@
+{
+	"name": "ToddHoward",
+	"plugin-id": "Sprite",
+	"sid": 453756855074746,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 497036427489538
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 959824251259226
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 278,
+						"height": 264,
+						"originX": 1.3381294964028776,
+						"originY": 0.5833333333333334,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2165494,
+						"collisionPoly": {
+							"points": [
+								0.007194244604316547,
+								0.12878787878787878,
+								0.9892086330935251,
+								0.5833333333333334,
+								0.06474820143884892,
+								0.9734848484848485,
+								0.007194244604316547,
+								0.5833333333333334
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 140059649779196,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 247,
+						"height": 119,
+						"originX": 0.4574898785425101,
+						"originY": 0.36134453781512604,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 737820,
+						"collisionPoly": {
+							"points": [
+								0.4574898785425101,
+								0.01680672268907563,
+								0.9919028340080972,
+								0.36134453781512604,
+								0.4574898785425101,
+								0.9831932773109243,
+								0.008097165991902834,
+								0.36134453781512604
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 214440695036129,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

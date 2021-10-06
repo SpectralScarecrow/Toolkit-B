@@ -1,0 +1,105 @@
+{
+	"name": "DanielRadcliffe",
+	"plugin-id": "Sprite",
+	"sid": 171676451294141,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 118143005818560
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 439670061724781
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 765432697397556
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 288178824508171
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 275,
+						"height": 180,
+						"originX": 0.509090909090909,
+						"originY": 0.5277777777777778,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5748215,
+						"collisionPoly": {
+							"points": [
+								0.509090909090909,
+								0.005555555555555556,
+								0.9854545454545455,
+								0.5277777777777778,
+								0.509090909090909,
+								0.9888888888888889,
+								0.01090909090909091,
+								0.5277777777777778
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 380806416791780,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 286,
+						"height": 147,
+						"originX": 0.5209790209790209,
+						"originY": 0.5510204081632653,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6537501,
+						"collisionPoly": {
+							"points": [
+								0.5209790209790209,
+								0.013605442176870748,
+								0.9895104895104895,
+								0.5510204081632653,
+								0.5209790209790209,
+								0.9863945578231292,
+								0.006993006993006993,
+								0.5510204081632653
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 836574364201032,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
