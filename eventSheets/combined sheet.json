@@ -42,11 +42,12 @@
 					],
 					"actions": [
 						{
-							"id": "set-visible",
-							"objectClass": "PressurePlateTrigger",
-							"sid": 528105676004248,
+							"id": "set-enabled",
+							"objectClass": "Static_Platform2",
+							"sid": 556286530415534,
+							"behaviorType": "Solid",
 							"parameters": {
-								"visibility": "visible"
+								"state": "enabled"
 							}
 						},
 						{
@@ -56,6 +57,83 @@
 							"parameters": {
 								"animation": "\"Animation 2\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Static_Platform2",
+							"sid": 926199548208978,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "DanielRadcliffe",
+							"sid": 770923459185456,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DanielRadcliffe",
+							"sid": 435626410928377,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "DanielRadcliffe",
+							"sid": 628706806320637,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "ToddHoward",
+							"sid": 763137920217822,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ToddHoward",
+							"sid": 318028877960309,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "box",
+							"sid": 557101269391858,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "box",
+							"sid": 866901696084168,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "box",
+							"sid": 964099928917400,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
 							}
 						}
 					],
@@ -76,10 +154,19 @@
 					"actions": [
 						{
 							"id": "set-visible",
-							"objectClass": "PressurePlateTrigger",
-							"sid": 273575640188420,
+							"objectClass": "Static_Platform2",
+							"sid": 957278932698627,
 							"parameters": {
 								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Static_Platform2",
+							"sid": 307699651927856,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
 							}
 						},
 						{
@@ -90,9 +177,189 @@
 								"animation": "\"Animation 2\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "DanielRadcliffe",
+							"sid": 417316103085490,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DanielRadcliffe",
+							"sid": 861190274469525,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "DanielRadcliffe",
+							"sid": 725190020483581,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "ToddHoward",
+							"sid": 127911019772331,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ToddHoward",
+							"sid": 893873094863457,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "box",
+							"sid": 329300300583929,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "box",
+							"sid": 407190384195982,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "box",
+							"sid": 842870035569905,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
 						}
 					],
 					"sid": 507194278438945
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerwithSlingshot",
+							"sid": 190395477333279,
+							"parameters": {
+								"object": "PressurePlate"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Static_Platform2",
+							"sid": 731044374959467,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PressurePlate",
+							"sid": 163540955331839,
+							"parameters": {
+								"animation": "\"Animation 2\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Static_Platform2",
+							"sid": 170356142383252,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "DanielRadcliffe",
+							"sid": 622202922229330,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DanielRadcliffe",
+							"sid": 208745593370484,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "DanielRadcliffe",
+							"sid": 769671855677334,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "ToddHoward",
+							"sid": 295951896065128,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ToddHoward",
+							"sid": 435720030502010,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "box",
+							"sid": 920851430242905,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "box",
+							"sid": 817308708267994,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "box",
+							"sid": 960080742234305,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 617166160495004
 				}
 			],
 			"sid": 379522010472795
@@ -122,10 +389,10 @@
 						{
 							"id": "move-to-position",
 							"objectClass": "DanielRadcliffe",
-							"sid": 515440411969787,
+							"sid": 279082635186855,
 							"behaviorType": "MoveTo",
 							"parameters": {
-								"x": "Player.X",
+								"x": "Player_Sprite.X",
 								"y": "0",
 								"mode": "direct"
 							}
@@ -538,12 +805,12 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 227340883217841,
+							"sid": 877644252596686,
 							"parameters": {
 								"object-to-create": "PlayerwithSlingshot",
 								"layer": "0",
-								"x": "368",
-								"y": "341",
+								"x": "70",
+								"y": "342",
 								"create-hierarchy": false
 							}
 						}
@@ -831,9 +1098,9 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-overlapping-another-object",
+							"id": "on-collision-with-another-object",
 							"objectClass": "Player_sprite",
-							"sid": 705380665675276,
+							"sid": 722723504528460,
 							"parameters": {
 								"object": "Apple_HP_and_Score_Tracker"
 							}
@@ -976,10 +1243,10 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 637509299283654,
+							"sid": 554179986440623,
 							"parameters": {
 								"variable": "Player_Health",
-								"comparison": 0,
+								"comparison": 3,
 								"value": "0"
 							}
 						}

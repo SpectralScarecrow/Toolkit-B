@@ -140,7 +140,8 @@
 			"Player",
 			"PressurePlate",
 			"PressurePlateTrigger",
-			"Slingshot"
+			"Slingshot",
+			"Static_Platform2"
 		],
 		"subfolders": [
 			{
