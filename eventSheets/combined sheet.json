@@ -42,15 +42,6 @@
 					],
 					"actions": [
 						{
-							"id": "set-enabled",
-							"objectClass": "Static_Platform2",
-							"sid": 556286530415534,
-							"behaviorType": "Solid",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
 							"id": "set-animation",
 							"objectClass": "PressurePlate",
 							"sid": 405861929150253,
@@ -161,15 +152,6 @@
 							}
 						},
 						{
-							"id": "set-enabled",
-							"objectClass": "Static_Platform2",
-							"sid": 307699651927856,
-							"behaviorType": "Solid",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
 							"id": "set-animation",
 							"objectClass": "PressurePlate",
 							"sid": 243792351353964,
@@ -263,15 +245,6 @@
 						}
 					],
 					"actions": [
-						{
-							"id": "set-enabled",
-							"objectClass": "Static_Platform2",
-							"sid": 731044374959467,
-							"behaviorType": "Solid",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
 						{
 							"id": "set-animation",
 							"objectClass": "PressurePlate",
