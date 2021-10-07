@@ -340,206 +340,6 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Enemy Follow Script",
-			"description": "This is Joey's code.",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "has-los-to-object",
-							"objectClass": "DanielRadcliffe",
-							"sid": 166493588035585,
-							"behaviorType": "LineOfSight",
-							"parameters": {
-								"object": "Player_sprite",
-								"image-point": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "move-to-position",
-							"objectClass": "DanielRadcliffe",
-							"sid": 279082635186855,
-							"behaviorType": "MoveTo",
-							"parameters": {
-								"x": "Player_Sprite.X",
-								"y": "0",
-								"mode": "direct"
-							}
-						}
-					],
-					"sid": 865876232431422
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "has-los-to-object",
-							"objectClass": "DanielRadcliffe",
-							"sid": 168803208342592,
-							"behaviorType": "LineOfSight",
-							"parameters": {
-								"object": "Player_sprite",
-								"image-point": "0"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "stop",
-							"objectClass": "DanielRadcliffe",
-							"sid": 764035778956278,
-							"behaviorType": "MoveTo"
-						}
-					],
-					"sid": 428922317149670
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "DanielRadcliffe",
-							"sid": 453360268673482,
-							"parameters": {
-								"object": "Player_sprite"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 177477307538212,
-							"parameters": {
-								"variable": "Player_Health",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 757517025188638
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "DanielRadcliffe",
-							"sid": 122847433746765,
-							"parameters": {
-								"object": "PlayerwithSlingshot"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 737739541056785,
-							"parameters": {
-								"variable": "Player_Health",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 869686275373335
-				}
-			],
-			"sid": 941143603904103
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Enemy Fall Script",
-			"description": "This is Joey's code.",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-x",
-							"objectClass": "Player_sprite",
-							"sid": 915757094299664,
-							"parameters": {
-								"comparison": 4,
-								"x-co-ordinate": "ToddHoward.X - 64"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-gravity",
-							"objectClass": "ToddHoward",
-							"sid": 638611456755323,
-							"behaviorType": "Platform",
-							"parameters": {
-								"gravity": "3000"
-							}
-						}
-					],
-					"sid": 318678689874785
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "ToddHoward",
-							"sid": 936369724337651,
-							"parameters": {
-								"object": "Player_sprite"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 993639752531328,
-							"parameters": {
-								"variable": "Player_Health",
-								"value": "3"
-							}
-						}
-					],
-					"sid": 462295123602123
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "ToddHoward",
-							"sid": 293020024475788,
-							"parameters": {
-								"object": "PlayerwithSlingshot"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 572831244980760,
-							"parameters": {
-								"variable": "Player_Health",
-								"value": "3"
-							}
-						}
-					],
-					"sid": 363076857241718
-				}
-			],
-			"sid": 487533198651078
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
 			"title": "Moving Box Script",
 			"description": "This is Nalah's code.",
 			"isActiveOnStart": true,
@@ -674,137 +474,6 @@
 							"sid": 569391127874023
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 906304019189779
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position-to-another-object",
-							"objectClass": "hitBox",
-							"sid": 170832274356571,
-							"parameters": {
-								"object": "PlayerwithSlingshot",
-								"image-point-optional": "1"
-							}
-						},
-						{
-							"id": "pin-to-object-properties",
-							"objectClass": "hitBox",
-							"sid": 897760778019703,
-							"behaviorType": "Pin",
-							"parameters": {
-								"pin-to": "PlayerwithSlingshot",
-								"x": true,
-								"y": true,
-								"angle": true,
-								"width-type": "no",
-								"height-type": "no",
-								"z": false
-							}
-						}
-					],
-					"sid": 194411127322936
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "hitBox",
-							"sid": 442701911211853,
-							"parameters": {
-								"object": "box"
-							}
-						},
-						{
-							"id": "compare-y",
-							"objectClass": "hitBox",
-							"sid": 121570865433713,
-							"parameters": {
-								"comparison": 4,
-								"y-co-ordinate": "box.Y"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 482531157724895,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "PlayerwithSlingshot",
-									"sid": 154870972349217,
-									"parameters": {
-										"comparison": 4,
-										"x-co-ordinate": "box.X"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 383087916328423,
-									"parameters": {
-										"key": 37
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "simulate-control",
-									"objectClass": "box",
-									"sid": 773879928918134,
-									"behaviorType": "Platform",
-									"parameters": {
-										"control": "left"
-									}
-								}
-							],
-							"sid": 264412887083627
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "PlayerwithSlingshot",
-									"sid": 939603166340914,
-									"parameters": {
-										"comparison": 2,
-										"x-co-ordinate": "box.X"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 773934450364877,
-									"parameters": {
-										"key": 39
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "simulate-control",
-									"objectClass": "box",
-									"sid": 610572844081853,
-									"behaviorType": "Platform",
-									"parameters": {
-										"control": "right"
-									}
-								}
-							],
-							"sid": 917033370136813
-						}
-					]
 				}
 			],
 			"sid": 305962351160166
@@ -898,8 +567,8 @@
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "Player_sprite",
-							"sid": 712215727513319,
+							"objectClass": "Slingshot",
+							"sid": 922437086561390,
 							"parameters": {
 								"object": "SlimeBullet",
 								"layer": "0",
@@ -1354,6 +1023,266 @@
 				}
 			],
 			"sid": 715893763735901
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Enemy Follow Script",
+					"description": "This is Joey's code.",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "DanielRadcliffe",
+									"sid": 742283098367182,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Player_sprite",
+										"image-point": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-to-position",
+									"objectClass": "DanielRadcliffe",
+									"sid": 589196217518117,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "Player_Sprite.X",
+										"y": "0",
+										"mode": "direct"
+									}
+								}
+							],
+							"sid": 927979848756754
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "DanielRadcliffe",
+									"sid": 511461680647058,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Player_sprite",
+										"image-point": "0"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "stop",
+									"objectClass": "DanielRadcliffe",
+									"sid": 590516790704937,
+									"behaviorType": "MoveTo"
+								}
+							],
+							"sid": 868623927399414
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "DanielRadcliffe",
+									"sid": 819402860404850,
+									"parameters": {
+										"object": "Player_sprite"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 629004463444834,
+									"parameters": {
+										"variable": "Player_Health",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 193914316580202
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "DanielRadcliffe",
+									"sid": 539858894874128,
+									"parameters": {
+										"object": "PlayerwithSlingshot"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 218359010250728,
+									"parameters": {
+										"variable": "Player_Health",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 470048245736145
+						}
+					],
+					"sid": 419485370773387
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Enemy Fall Script",
+					"description": "This is Joey's code.",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Player_sprite",
+									"sid": 959489579770040,
+									"parameters": {
+										"comparison": 4,
+										"x-co-ordinate": "ToddHoward.X - 64"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-gravity",
+									"objectClass": "ToddHoward",
+									"sid": 170195204025365,
+									"behaviorType": "Platform",
+									"parameters": {
+										"gravity": "3000"
+									}
+								}
+							],
+							"sid": 808148998483062
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "ToddHoward",
+									"sid": 487735391071881,
+									"parameters": {
+										"object": "Player_sprite"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 552104503783295,
+									"parameters": {
+										"variable": "Player_Health",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 258090089015109
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "ToddHoward",
+									"sid": 257772519887626,
+									"parameters": {
+										"object": "PlayerwithSlingshot"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 537254659126533,
+									"parameters": {
+										"variable": "Player_Health",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 551770891780254
+						}
+					],
+					"sid": 931557006278316
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy_Family",
+							"sid": 602533524138785,
+							"parameters": {
+								"object": "SlimeBullet"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Enemy_Family",
+							"sid": 918232429613548,
+							"parameters": {
+								"instance-variable": "EnemyHealth",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 592723712739561,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy_Family",
+									"sid": 484662964799091,
+									"parameters": {
+										"instance-variable": "EnemyHealth",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemy_Family",
+									"sid": 466007244521901
+								}
+							],
+							"sid": 140648033342360
+						}
+					]
+				}
+			],
+			"sid": 417891106613217
 		}
 	],
 	"sid": 343251894526628

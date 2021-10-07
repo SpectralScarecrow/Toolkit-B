@@ -187,7 +187,9 @@
 						"live-preview": false
 					},
 					"uid": 20,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"EnemyHealth": 0
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {

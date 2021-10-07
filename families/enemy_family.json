@@ -2,7 +2,14 @@
 	"name": "Enemy_Family",
 	"plugin-id": "Sprite",
 	"sid": 521997304704016,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "EnemyHealth",
+			"type": "number",
+			"desc": "",
+			"sid": 349929529669656
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
