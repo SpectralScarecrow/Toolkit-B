@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 628764435302813,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "HasSlingshot",
+			"type": "boolean",
+			"desc": "",
+			"sid": 634775619136697
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Platform",
@@ -24,19 +31,132 @@
 					{
 						"width": 275,
 						"height": 180,
-						"originX": 0.38029405674052585,
-						"originY": 0.7941210441210441,
+						"originX": 0.5,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 958488,
+						"imageSpriteId": 1459266,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Slingshot",
+								"x": 0,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 275,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7005904,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Slingshot",
+								"x": 0,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],
 				"sid": 390864672116725,
-				"name": "Animation 1",
-				"isLooping": false,
+				"name": "Idle",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 2
+			},
+			{
+				"frames": [
+					{
+						"width": 275,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3951056,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Slingshot",
+								"x": 0,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 275,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3581217,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Slingshot",
+								"x": 0,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 275,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7943658,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Slingshot",
+								"x": 0,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 275,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2255665,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Slingshot",
+								"x": 0,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 880947016450940,
+				"name": "Walking",
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
@@ -45,20 +165,27 @@
 			{
 				"frames": [
 					{
-						"width": 286,
-						"height": 147,
-						"originX": 0.40559440559440557,
-						"originY": 0.40816326530612246,
+						"width": 275,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8907806,
+						"imageSpriteId": 7660856,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Slingshot",
+								"x": 0,
+								"y": 0.5
+							}
+						],
 						"duration": 1
 					}
 				],
 				"sid": 813948950463616,
-				"name": "Animation 2",
+				"name": "Landing",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

@@ -66,35 +66,6 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "Slingshot",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 32,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 172,
-						"y": 329,
-						"width": 20.999999999999993,
-						"height": 24,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Static_Platform",
 					"properties": {
 						"initially-visible": true,
@@ -147,7 +118,7 @@
 								"acceleration": 0,
 								"gravity": 0,
 								"bounce-off-solids": false,
-								"set-angle": false,
+								"set-angle": true,
 								"step": false,
 								"enabled": true
 							}
@@ -156,7 +127,7 @@
 							"properties": {
 								"fade-in-time": 0,
 								"wait-time": 1.5,
-								"fade-out-time": 0.5,
+								"fade-out-time": 0.1,
 								"destroy": true,
 								"enabled": true,
 								"live-preview": false
@@ -652,13 +623,15 @@
 					"type": "Player_sprite",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
 					"uid": 46,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"HasSlingshot": false
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
@@ -685,8 +658,8 @@
 						"y": 354.05760634070487,
 						"width": 36.332574031890665,
 						"height": 23.575883575883577,
-						"originX": 0.38029405674052585,
-						"originY": 0.7941210441210441,
+						"originX": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -695,6 +668,35 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "Slingshot",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 32,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 172,
+						"y": 329,
+						"width": 20.999999999999993,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 1
 					}
 				}
 			],
