@@ -1,5 +1,5 @@
 Group C Agenda
-- [x] Fix falling enemy bugs
-- [x] Review Collisions
-- [x] Implement slingshot to damage enemies
-- [x] Determine level plans
+- [ ] Fix falling enemy bugs
+- [ ] Review Collisions
+- [ ] Implement slingshot to damage enemies
+- [ ] Determine level plans
