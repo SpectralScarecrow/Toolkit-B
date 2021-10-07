@@ -9,6 +9,11 @@
 			"behaviorId": "Bullet",
 			"name": "Bullet",
 			"sid": 995187001959115
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 178003559766552
 		}
 	],
 	"effectTypes": [],

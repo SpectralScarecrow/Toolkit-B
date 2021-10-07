@@ -80,6 +80,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
@@ -210,7 +218,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Enemy_Family"
+			"Enemy_Family",
+			"Obstacle"
 		],
 		"subfolders": []
 	},

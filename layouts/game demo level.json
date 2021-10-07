@@ -201,6 +201,16 @@
 								"step": false,
 								"enabled": true
 							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 1.5,
+								"fade-out-time": 0.5,
+								"destroy": true,
+								"enabled": true,
+								"live-preview": false
+							}
 						}
 					},
 					"world": {
@@ -446,7 +456,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 6.267128256755949,
 						"zElevation": 0
 					}
 				},

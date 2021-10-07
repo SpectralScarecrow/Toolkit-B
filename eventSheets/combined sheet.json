@@ -839,37 +839,6 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Spike Trap",
-			"description": "This is Nalah's code.",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Player_sprite",
-							"sid": 422861517955396,
-							"parameters": {
-								"object": "spike"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 601441670540942
-						}
-					],
-					"sid": 333276546998924
-				}
-			],
-			"sid": 977944410724031
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
 			"title": "Slingshot and Slime Bullet Script",
 			"description": "This is Raheem's code.",
 			"isActiveOnStart": true,
@@ -1047,116 +1016,6 @@
 						}
 					],
 					"sid": 415445609341694
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-created",
-							"objectClass": "SlimeBullet",
-							"sid": 153277481189042
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 329026684499959,
-							"parameters": {
-								"seconds": "1.5"
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "SlimeBullet",
-							"sid": 852646796634908
-						}
-					],
-					"sid": 140065551553519
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Player_sprite",
-							"sid": 310478550034706,
-							"parameters": {
-								"object": "Acid"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 686641279562094
-						}
-					],
-					"sid": 772382011163849
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Player_sprite",
-							"sid": 438319925840749,
-							"parameters": {
-								"object": "Tar"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 265625406861353
-						}
-					],
-					"sid": 385330099042893
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "PlayerwithSlingshot",
-							"sid": 744041834293861,
-							"parameters": {
-								"object": "Acid"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 664380612143858
-						}
-					],
-					"sid": 325435643598716
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "PlayerwithSlingshot",
-							"sid": 168505643801519,
-							"parameters": {
-								"object": "Tar"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 392762380967126
-						}
-					],
-					"sid": 325612194943883
 				},
 				{
 					"eventType": "block",
@@ -1436,6 +1295,37 @@
 				}
 			],
 			"sid": 441542195944371
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Obstacles",
+			"description": "I, Alex, made this for the obstacle family which are objects that force the player to restart upon contact",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player_sprite",
+							"sid": 882393658371726,
+							"parameters": {
+								"object": "Obstacle"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 804618001688454
+						}
+					],
+					"sid": 837193625735725
+				}
+			],
+			"sid": 715893763735901
 		}
 	],
 	"sid": 343251894526628

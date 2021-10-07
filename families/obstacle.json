@@ -1,0 +1,13 @@
+{
+	"name": "Obstacle",
+	"plugin-id": "Sprite",
+	"sid": 141080361301577,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Tar",
+		"spike",
+		"Acid"
+	]
+}
