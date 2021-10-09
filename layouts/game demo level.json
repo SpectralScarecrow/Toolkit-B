@@ -481,7 +481,9 @@
 						"live-preview": false
 					},
 					"uid": 44,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DealDamage": true
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
@@ -499,7 +501,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": false,
+								"enabled": true,
 								"tags": ""
 							}
 						}
@@ -509,8 +511,8 @@
 						"y": 85.53418482344102,
 						"width": 71.168,
 						"height": 67.584,
-						"originX": 1.3381294964028776,
-						"originY": 0.5833333333333334,
+						"originX": 0.5,
+						"originY": 0.03787878787878788,
 						"color": [
 							1,
 							1,

@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 453756855074746,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "DealDamage",
+			"type": "boolean",
+			"desc": "",
+			"sid": 318546578630164
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Platform",
@@ -24,24 +31,12 @@
 					{
 						"width": 278,
 						"height": 264,
-						"originX": 1.3381294964028776,
-						"originY": 0.5833333333333334,
+						"originX": 0.5,
+						"originY": 0.03787878787878788,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
 						"imageSpriteId": 2165494,
-						"collisionPoly": {
-							"points": [
-								0.007194244604316547,
-								0.12878787878787878,
-								0.9892086330935251,
-								0.5833333333333334,
-								0.06474820143884892,
-								0.9734848484848485,
-								0.007194244604316547,
-								0.5833333333333334
-							]
-						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}

@@ -1302,51 +1302,91 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-collision-with-another-object",
+									"id": "is-boolean-instance-variable-set",
 									"objectClass": "ToddHoward",
-									"sid": 487735391071881,
+									"sid": 965863942943985,
 									"parameters": {
-										"object": "Player"
+										"instance-variable": "DealDamage"
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 712242058971315,
+							"children": [
 								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 552104503783295,
-									"parameters": {
-										"variable": "Player_Health",
-										"value": "3"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "ToddHoward",
+											"sid": 763300296398716,
+											"parameters": {
+												"object": "Player"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 959293519625658,
+											"parameters": {
+												"variable": "Player_Health",
+												"value": "3"
+											}
+										}
+									],
+									"sid": 375419643803863
 								}
-							],
-							"sid": 258090089015109
+							]
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-collision-with-another-object",
+									"id": "compare-y",
 									"objectClass": "ToddHoward",
-									"sid": 257772519887626,
+									"sid": 685536039564024,
 									"parameters": {
-										"object": "PlayerwithSlingshot"
+										"comparison": 2,
+										"y-co-ordinate": "Player.Y"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 537254659126533,
+									"id": "set-boolean-instvar",
+									"objectClass": "ToddHoward",
+									"sid": 110324011175221,
 									"parameters": {
-										"variable": "Player_Health",
-										"value": "3"
+										"instance-variable": "DealDamage",
+										"value": "true"
 									}
 								}
 							],
-							"sid": 551770891780254
+							"sid": 550408803374141
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 580006349815636
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "ToddHoward",
+									"sid": 600658668263945,
+									"parameters": {
+										"instance-variable": "DealDamage",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 641378261856284
 						}
 					],
 					"sid": 931557006278316
