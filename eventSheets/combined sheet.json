@@ -33,7 +33,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 345180963873843,
 							"parameters": {
 								"object": "PressurePlate"
@@ -348,130 +348,153 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
+							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 242134413145223
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position-to-another-object",
-							"objectClass": "hitBox",
-							"sid": 909760526194457,
+							"sid": 589565249868819,
 							"parameters": {
-								"object": "Player_sprite",
-								"image-point-optional": "1"
+								"first-value": "abs(Player.X - box.X) / 10",
+								"comparison": 2,
+								"second-value": "7"
 							}
 						},
 						{
-							"id": "pin-to-object-properties",
-							"objectClass": "hitBox",
-							"sid": 514487252478952,
-							"behaviorType": "Pin",
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 881342461938235,
 							"parameters": {
-								"pin-to": "Player_sprite",
-								"x": true,
-								"y": true,
-								"angle": true,
-								"width-type": "no",
-								"height-type": "no",
-								"z": false
-							}
-						}
-					],
-					"sid": 199112115522785
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "hitBox",
-							"sid": 901671211130190,
-							"parameters": {
-								"object": "box"
-							}
-						},
-						{
-							"id": "compare-y",
-							"objectClass": "hitBox",
-							"sid": 435297106538731,
-							"parameters": {
+								"first-value": "Player.Y",
 								"comparison": 4,
-								"y-co-ordinate": "box.Y"
+								"second-value": "box.Y"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 205241489066272,
+					"sid": 303078977405454,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-x",
-									"objectClass": "Player_sprite",
-									"sid": 668558880586362,
+									"id": "pick-nearestfurthest",
+									"objectClass": "box",
+									"sid": 173020258828155,
 									"parameters": {
-										"comparison": 4,
-										"x-co-ordinate": "box.X"
+										"which": "nearest",
+										"x": "Player.X",
+										"y": "Player.Y"
 									}
+								}
+							],
+							"actions": [],
+							"sid": 477505491834020,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 400346254854427,
+											"parameters": {
+												"key": 37
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 952871739086038,
+											"parameters": {
+												"key": 65
+											}
+										}
+									],
+									"actions": [],
+									"sid": 389015632433339,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 785818647840901,
+													"parameters": {
+														"first-value": "Player.X",
+														"comparison": 4,
+														"second-value": "box.X"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "box",
+													"sid": 936474540928145,
+													"behaviorType": "Platform",
+													"parameters": {
+														"control": "left"
+													}
+												}
+											],
+											"sid": 987093011439601
+										}
+									],
+									"isOrBlock": true
 								},
 								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 922880177232659,
-									"parameters": {
-										"key": 37
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 313689243041185,
+											"parameters": {
+												"key": 39
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 880153788524186,
+											"parameters": {
+												"key": 68
+											}
+										}
+									],
+									"actions": [],
+									"sid": 295097077651316,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 782906440869120,
+													"parameters": {
+														"first-value": "Player.X",
+														"comparison": 2,
+														"second-value": "box.X"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "box",
+													"sid": 781098176082444,
+													"behaviorType": "Platform",
+													"parameters": {
+														"control": "right"
+													}
+												}
+											],
+											"sid": 853282344895244
+										}
+									],
+									"isOrBlock": true
 								}
-							],
-							"actions": [
-								{
-									"id": "simulate-control",
-									"objectClass": "box",
-									"sid": 564146731959406,
-									"behaviorType": "Platform",
-									"parameters": {
-										"control": "left"
-									}
-								}
-							],
-							"sid": 950999924974319
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "Player_sprite",
-									"sid": 463056147955137,
-									"parameters": {
-										"comparison": 2,
-										"x-co-ordinate": "box.X"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 872366092525764,
-									"parameters": {
-										"key": 39
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "simulate-control",
-									"objectClass": "box",
-									"sid": 485320379945726,
-									"behaviorType": "Platform",
-									"parameters": {
-										"control": "right"
-									}
-								}
-							],
-							"sid": 569391127874023
+							]
 						}
 					]
 				}
@@ -490,7 +513,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 814133947619669,
 							"parameters": {
 								"object": "Slingshot"
@@ -508,7 +531,7 @@
 						},
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 665782644008461,
 							"parameters": {
 								"instance-variable": "HasSlingshot",
@@ -549,7 +572,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 717946143823098,
 							"parameters": {
 								"instance-variable": "HasSlingshot"
@@ -562,8 +585,8 @@
 							"objectClass": "Slingshot",
 							"sid": 819933026993729,
 							"parameters": {
-								"x": "Player_sprite.ImagePointX(1)",
-								"y": "Player_sprite.ImagePointY(1)"
+								"x": "Player.ImagePointX(1)",
+								"y": "Player.ImagePointY(1)"
 							}
 						}
 					],
@@ -574,7 +597,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 594289534062432,
 							"parameters": {
 								"instance-variable": "HasSlingshot"
@@ -648,7 +671,7 @@
 											"conditions": [
 												{
 													"id": "is-mirrored",
-													"objectClass": "Player_sprite",
+													"objectClass": "Player",
 													"sid": 594707142365685
 												}
 											],
@@ -670,7 +693,7 @@
 											"conditions": [
 												{
 													"id": "is-mirrored",
-													"objectClass": "Player_sprite",
+													"objectClass": "Player",
 													"sid": 919504445068025,
 													"isInverted": true
 												}
@@ -792,7 +815,7 @@
 					"conditions": [
 						{
 							"id": "is-overlapping-another-object",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 729114344473024,
 							"parameters": {
 								"object": "Apple_HP_and_Score_Tracker"
@@ -904,7 +927,7 @@
 					"conditions": [
 						{
 							"id": "is-falling",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 634270515161092,
 							"behaviorType": "Platform"
 						}
@@ -912,7 +935,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 247566106078026,
 							"parameters": {
 								"animation": "\"Landing\"",
@@ -927,7 +950,7 @@
 					"conditions": [
 						{
 							"id": "is-moving",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 947098592177000,
 							"behaviorType": "Platform"
 						}
@@ -935,7 +958,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 334694682440491,
 							"parameters": {
 								"animation": "\"Walking\"",
@@ -950,7 +973,7 @@
 					"conditions": [
 						{
 							"id": "is-moving",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 548600129827554,
 							"behaviorType": "Platform",
 							"isInverted": true
@@ -959,7 +982,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 309321963009258,
 							"parameters": {
 								"animation": "\"Idle\"",
@@ -992,7 +1015,7 @@
 					"actions": [
 						{
 							"id": "set-mirrored",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 602537980796120,
 							"parameters": {
 								"state": "not-mirrored"
@@ -1000,7 +1023,7 @@
 						},
 						{
 							"id": "simulate-control",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 460518391665540,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -1034,7 +1057,7 @@
 					"actions": [
 						{
 							"id": "set-mirrored",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 540165577675008,
 							"parameters": {
 								"state": "mirrored"
@@ -1042,7 +1065,7 @@
 						},
 						{
 							"id": "simulate-control",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 904014207155806,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -1076,7 +1099,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 160971867439156,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -1102,7 +1125,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Player_sprite",
+							"objectClass": "Player",
 							"sid": 882393658371726,
 							"parameters": {
 								"object": "Obstacle"
@@ -1144,7 +1167,7 @@
 									"sid": 742283098367182,
 									"behaviorType": "LineOfSight",
 									"parameters": {
-										"object": "Player_sprite",
+										"object": "Player",
 										"image-point": "0"
 									}
 								}
@@ -1156,7 +1179,7 @@
 									"sid": 589196217518117,
 									"behaviorType": "MoveTo",
 									"parameters": {
-										"x": "Player_Sprite.X",
+										"x": "Player.X",
 										"y": "0",
 										"mode": "direct"
 									}
@@ -1173,7 +1196,7 @@
 									"sid": 511461680647058,
 									"behaviorType": "LineOfSight",
 									"parameters": {
-										"object": "Player_sprite",
+										"object": "Player",
 										"image-point": "0"
 									},
 									"isInverted": true
@@ -1197,7 +1220,7 @@
 									"objectClass": "DanielRadcliffe",
 									"sid": 819402860404850,
 									"parameters": {
-										"object": "Player_sprite"
+										"object": "Player"
 									}
 								}
 							],
@@ -1254,7 +1277,7 @@
 							"conditions": [
 								{
 									"id": "compare-x",
-									"objectClass": "Player_sprite",
+									"objectClass": "Player",
 									"sid": 959489579770040,
 									"parameters": {
 										"comparison": 4,
@@ -1283,7 +1306,7 @@
 									"objectClass": "ToddHoward",
 									"sid": 487735391071881,
 									"parameters": {
-										"object": "Player_sprite"
+										"object": "Player"
 									}
 								}
 							],
