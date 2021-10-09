@@ -6,6 +6,8 @@
 **Pending Fixes**
 - [ ] Fix falling enemy bugs
 - [ ] Review Collisions
+- [ ] Make the button more flexible
+  - Currently the button's functions are hardcoded
 
 **Completed**
 - [X] Implement slingshot to damage enemies
