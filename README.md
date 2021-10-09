@@ -1,4 +1,4 @@
-Group C Agenda
+**Group C Agenda** <br/>
 **To Do**
 - [ ] implement audio
 - [ ] Determine level plans
