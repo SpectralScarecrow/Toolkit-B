@@ -556,11 +556,20 @@
 							}
 						},
 						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Player_sprite",
-							"sid": 391138152709173,
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 473297300236897,
 							"parameters": {
-								"instance-variable": "HasSlingshot"
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 677356693884037,
+							"parameters": {
+								"key": 90
 							}
 						}
 					],
@@ -583,90 +592,93 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "pick-last-created",
-									"objectClass": "System",
-									"sid": 929776417712880,
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player_sprite",
+									"sid": 360270517700596,
 									"parameters": {
-										"object": "SlimeBullet"
+										"instance-variable": "HasSlingshot"
 									}
 								}
 							],
-							"actions": [],
-							"sid": 161121923841344,
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Slingshot",
+									"sid": 654548835813549,
+									"parameters": {
+										"x": "Player_sprite.ImagePointX(1)",
+										"y": "Player_sprite.ImagePointY(1)"
+									}
+								}
+							],
+							"sid": 708909138216278,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "is-mirrored",
-											"objectClass": "Player_sprite",
-											"sid": 255017005640003
-										}
-									],
-									"actions": [
-										{
-											"id": "set-speed",
-											"objectClass": "SlimeBullet",
-											"sid": 895933186535002,
-											"behaviorType": "Bullet",
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 675844727489518,
 											"parameters": {
-												"speed": "400"
+												"object": "SlimeBullet"
 											}
 										}
 									],
-									"sid": 368570538046637
-								},
-								{
-									"eventType": "block",
-									"conditions": [
+									"actions": [],
+									"sid": 447225559769285,
+									"children": [
 										{
-											"id": "is-mirrored",
-											"objectClass": "Player_sprite",
-											"sid": 145028442222830,
-											"isInverted": true
-										}
-									],
-									"actions": [
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "Player_sprite",
+													"sid": 680812662188227
+												}
+											],
+											"actions": [
+												{
+													"id": "set-speed",
+													"objectClass": "SlimeBullet",
+													"sid": 582335149829082,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"speed": "400"
+													}
+												}
+											],
+											"sid": 522898728720419
+										},
 										{
-											"id": "set-speed",
-											"objectClass": "SlimeBullet",
-											"sid": 603581337045704,
-											"behaviorType": "Bullet",
-											"parameters": {
-												"speed": "-400"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "Player_sprite",
+													"sid": 974862961718938,
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-speed",
+													"objectClass": "SlimeBullet",
+													"sid": 960821975956277,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"speed": "-400"
+													}
+												}
+											],
+											"sid": 506348793396368
 										}
-									],
-									"sid": 383562032362083
+									]
 								}
 							]
 						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Player_sprite",
-							"sid": 736660476134405,
-							"parameters": {
-								"instance-variable": "HasSlingshot"
-							}
-						}
 					],
-					"actions": [
-						{
-							"id": "set-position",
-							"objectClass": "Slingshot",
-							"sid": 370897182846310,
-							"parameters": {
-								"x": "Player_sprite.ImagePointX(1)",
-								"y": "Player_sprite.ImagePointY(1)"
-							}
-						}
-					],
-					"sid": 514564254871698
+					"isOrBlock": true
 				}
 			],
 			"sid": 464263342794773
@@ -952,6 +964,14 @@
 							"parameters": {
 								"key": 37
 							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 965456859407682,
+							"parameters": {
+								"key": 65
+							}
 						}
 					],
 					"actions": [
@@ -962,9 +982,19 @@
 							"parameters": {
 								"state": "not-mirrored"
 							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_sprite",
+							"sid": 460518391665540,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
 						}
 					],
-					"sid": 871061148498572
+					"sid": 871061148498572,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -976,6 +1006,14 @@
 							"parameters": {
 								"key": 39
 							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 309626751291792,
+							"parameters": {
+								"key": 68
+							}
 						}
 					],
 					"actions": [
@@ -986,9 +1024,61 @@
 							"parameters": {
 								"state": "mirrored"
 							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_sprite",
+							"sid": 904014207155806,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
 						}
 					],
-					"sid": 650320471262165
+					"sid": 650320471262165,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 164819932093408,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 726545242746230,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Player_sprite",
+							"sid": 528379068928267,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Player_sprite",
+							"sid": 160971867439156,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 629623229646085,
+					"isOrBlock": true
 				}
 			],
 			"sid": 441542195944371
