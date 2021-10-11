@@ -345,48 +345,66 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Prevents all the boxes from being moved at the same time"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 589565249868819,
+							"id": "pick-nearestfurthest",
+							"objectClass": "box",
+							"sid": 549709456015489,
 							"parameters": {
-								"first-value": "abs(Player.X - box.X) / 10",
-								"comparison": 2,
-								"second-value": "7"
-							}
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 881342461938235,
-							"parameters": {
-								"first-value": "Player.Y",
-								"comparison": 4,
-								"second-value": "box.Y"
+								"which": "nearest",
+								"x": "Player.X",
+								"y": "Player.Y - 25"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 303078977405454,
+					"sid": 920012164230538,
 					"children": [
+						{
+							"eventType": "comment",
+							"text": "First condition checks if it is basically touching the box, second condition checks if it is near enough on the y (same as first but for y essentially) and the final condition makes sure that the player can't move the box from above it."
+						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "pick-nearestfurthest",
-									"objectClass": "box",
-									"sid": 173020258828155,
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 502774928060362,
 									"parameters": {
-										"which": "nearest",
-										"x": "Player.X",
-										"y": "Player.Y"
+										"first-value": "abs(Player.X - box.X) / 10",
+										"comparison": 2,
+										"second-value": "7"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 306543360864726,
+									"parameters": {
+										"first-value": "abs(Player.Y - box.Y) / 10",
+										"comparison": 2,
+										"second-value": "5"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 752235450804044,
+									"parameters": {
+										"first-value": "Player.Y",
+										"comparison": 4,
+										"second-value": "box.Y"
 									}
 								}
 							],
 							"actions": [],
-							"sid": 477505491834020,
+							"sid": 704030947446331,
 							"children": [
 								{
 									"eventType": "block",
@@ -394,7 +412,7 @@
 										{
 											"id": "key-is-down",
 											"objectClass": "Keyboard",
-											"sid": 400346254854427,
+											"sid": 898094243623123,
 											"parameters": {
 												"key": 37
 											}
@@ -402,14 +420,14 @@
 										{
 											"id": "key-is-down",
 											"objectClass": "Keyboard",
-											"sid": 952871739086038,
+											"sid": 612730374870205,
 											"parameters": {
 												"key": 65
 											}
 										}
 									],
 									"actions": [],
-									"sid": 389015632433339,
+									"sid": 698419428084865,
 									"children": [
 										{
 											"eventType": "block",
@@ -417,7 +435,7 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 785818647840901,
+													"sid": 238679033651590,
 													"parameters": {
 														"first-value": "Player.X",
 														"comparison": 4,
@@ -429,14 +447,14 @@
 												{
 													"id": "simulate-control",
 													"objectClass": "box",
-													"sid": 936474540928145,
+													"sid": 227716386882775,
 													"behaviorType": "Platform",
 													"parameters": {
 														"control": "left"
 													}
 												}
 											],
-											"sid": 987093011439601
+											"sid": 940193200433566
 										}
 									],
 									"isOrBlock": true
@@ -447,7 +465,7 @@
 										{
 											"id": "key-is-down",
 											"objectClass": "Keyboard",
-											"sid": 313689243041185,
+											"sid": 621188165155187,
 											"parameters": {
 												"key": 39
 											}
@@ -455,14 +473,14 @@
 										{
 											"id": "key-is-down",
 											"objectClass": "Keyboard",
-											"sid": 880153788524186,
+											"sid": 510914259644032,
 											"parameters": {
 												"key": 68
 											}
 										}
 									],
 									"actions": [],
-									"sid": 295097077651316,
+									"sid": 490684746097948,
 									"children": [
 										{
 											"eventType": "block",
@@ -470,7 +488,7 @@
 												{
 													"id": "compare-two-values",
 													"objectClass": "System",
-													"sid": 782906440869120,
+													"sid": 200460194663950,
 													"parameters": {
 														"first-value": "Player.X",
 														"comparison": 2,
@@ -482,14 +500,14 @@
 												{
 													"id": "simulate-control",
 													"objectClass": "box",
-													"sid": 781098176082444,
+													"sid": 965102551853360,
 													"behaviorType": "Platform",
 													"parameters": {
 														"control": "right"
 													}
 												}
 											],
-											"sid": 853282344895244
+											"sid": 490158629720802
 										}
 									],
 									"isOrBlock": true
@@ -497,6 +515,42 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Sets the text to the values important for moving the boxes, needed it for debugging"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 368737123816203
+						},
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "box",
+							"sid": 608085198975117,
+							"parameters": {
+								"which": "nearest",
+								"x": "Player.X",
+								"y": "Player.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TestText",
+							"sid": 665837560804478,
+							"parameters": {
+								"text": "\"X: \" & (round(abs(Player.X - box.X) / 10)) & \" Y: \" & (round(abs(Player.Y - box.Y) / 10))"
+							}
+						}
+					],
+					"sid": 693372639009413,
+					"disabled": true
 				}
 			],
 			"sid": 305962351160166

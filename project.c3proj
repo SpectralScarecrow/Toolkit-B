@@ -157,7 +157,9 @@
 			"PressurePlate",
 			"PressurePlateTrigger",
 			"Slingshot",
-			"Static_Platform2"
+			"Static_Platform2",
+			"Text",
+			"TestText"
 		],
 		"subfolders": [
 			{

@@ -227,8 +227,8 @@
 						}
 					},
 					"world": {
-						"x": 189,
-						"y": 419,
+						"x": 546,
+						"y": 406,
 						"width": 82,
 						"height": 82,
 						"originX": 0.48423423423423423,
@@ -298,8 +298,8 @@
 						}
 					},
 					"world": {
-						"x": 610.7468879668049,
-						"y": 421.49344978165936,
+						"x": 802,
+						"y": 419,
 						"width": 121,
 						"height": 86,
 						"originX": 0.4854771784232365,
@@ -383,8 +383,8 @@
 						}
 					},
 					"world": {
-						"x": 710,
-						"y": 202,
+						"x": 321,
+						"y": 89,
 						"width": 82,
 						"height": 82,
 						"originX": 0.48423423423423423,
@@ -424,6 +424,98 @@
 						"height": 62,
 						"originX": 0.45768566493955093,
 						"originY": 0.527027027027027,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TestText",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 24,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 35,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 76,
+						"y": 194,
+						"width": 511,
+						"height": 94,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "box",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 47,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"Platform": {
+							"properties": {
+								"max-speed": 330,
+								"acceleration": 1500,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 202,
+						"y": 404,
+						"width": 82,
+						"height": 82,
+						"originX": 0.48423423423423423,
+						"originY": 0.6425,
 						"color": [
 							1,
 							1,
