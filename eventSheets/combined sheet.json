@@ -1346,10 +1346,10 @@
 								{
 									"id": "compare-y",
 									"objectClass": "ToddHoward",
-									"sid": 685536039564024,
+									"sid": 102466569916829,
 									"parameters": {
 										"comparison": 2,
-										"y-co-ordinate": "Player.Y"
+										"y-co-ordinate": "Player.Y - 10"
 									}
 								}
 							],
