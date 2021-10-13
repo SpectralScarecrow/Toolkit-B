@@ -172,7 +172,7 @@
 			},
 			{
 				"items": [
-					"Apple_HP_and_Score_Tracker"
+					"Apple"
 				],
 				"subfolders": [],
 				"name": "Collectibles"
@@ -214,10 +214,7 @@
 			},
 			{
 				"items": [
-					"Display_HP_Value",
-					"Display_Score_Value",
-					"Display_For_Description",
-					"Display_For_Description2"
+					"HealthText"
 				],
 				"subfolders": [],
 				"name": "HUD"

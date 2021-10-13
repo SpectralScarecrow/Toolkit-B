@@ -2,26 +2,6 @@
 	"name": "Combined Sheet",
 	"events": [
 		{
-			"eventType": "variable",
-			"name": "Player_Health",
-			"type": "number",
-			"initialValue": "3",
-			"comment": "This variable tracks the player's Health level, if it reaches 0 then the player dies. There's no maximum limit besides this starting at 3.",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 852814367451379
-		},
-		{
-			"eventType": "variable",
-			"name": "Score",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "This variable tracks the amount of 'Apples' the player has collected as a means of keeping score. If you wish to ignore this score mechanic, do not use the text UI that corresponds to this variable.",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 206319704048161
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Pressure Plate Script",
@@ -786,162 +766,39 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 896449068556023
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 442930990429460,
-							"parameters": {
-								"variable": "Player_Health",
-								"value": "3"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 918006771667122,
-							"parameters": {
-								"variable": "Score",
-								"value": "0"
-							}
-						}
-					],
-					"sid": 312383730914081
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "PlayerwithSlingshot",
-							"sid": 132725160298773,
-							"parameters": {
-								"object": "Apple_HP_and_Score_Tracker"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "Apple_HP_and_Score_Tracker",
-							"sid": 286289255358955
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 941019504291524,
-							"parameters": {
-								"audio-file": "Pickup",
-								"loop": "not-looping",
-								"volume": "-5",
-								"tag-optional": "\"Apple Pick Up\""
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 540912665127245,
-							"parameters": {
-								"variable": "Player_Health",
-								"value": "1"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 999575744419137,
-							"parameters": {
-								"variable": "Score",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 342388013500310,
-					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
 							"objectClass": "Player",
-							"sid": 729114344473024,
+							"sid": 100337358536427,
 							"parameters": {
-								"object": "Apple_HP_and_Score_Tracker"
+								"object": "Apple"
 							}
 						}
 					],
 					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Player",
+							"sid": 842151759304163,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "1"
+							}
+						},
 						{
 							"id": "destroy",
-							"objectClass": "Apple_HP_and_Score_Tracker",
-							"sid": 763793538663637
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 729916000571230,
-							"parameters": {
-								"audio-file": "Pickup",
-								"loop": "not-looping",
-								"volume": "-5",
-								"tag-optional": "\"Apple Pick Up\""
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 737262276202462,
-							"parameters": {
-								"variable": "Player_Health",
-								"value": "1"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 549256902410117,
-							"parameters": {
-								"variable": "Score",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 721491129932137
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 297301504949657
-						}
-					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "Display_HP_Value",
-							"sid": 213588498759708,
-							"parameters": {
-								"text": "Player_Health"
-							}
+							"objectClass": "Apple",
+							"sid": 589944541073632
 						},
 						{
 							"id": "set-text",
-							"objectClass": "Display_Score_Value",
-							"sid": 996332980234450,
+							"objectClass": "HealthText",
+							"sid": 277266012709772,
 							"parameters": {
-								"text": "Score"
+								"text": "\"Health: \" & Player.Health"
 							}
 						}
 					],
-					"sid": 849705656201708
+					"sid": 576815846895938
 				}
 			],
 			"sid": 311483450890113
@@ -957,11 +814,11 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 554179986440623,
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 997444868027501,
 							"parameters": {
-								"variable": "Player_Health",
+								"instance-variable": "Health",
 								"comparison": 3,
 								"value": "0"
 							}
@@ -1301,41 +1158,16 @@
 							],
 							"actions": [
 								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 629004463444834,
+									"id": "subtract-from-instvar",
+									"objectClass": "Player",
+									"sid": 115476583663091,
 									"parameters": {
-										"variable": "Player_Health",
+										"instance-variable": "Health",
 										"value": "1"
 									}
 								}
 							],
 							"sid": 193914316580202
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "DanielRadcliffe",
-									"sid": 539858894874128,
-									"parameters": {
-										"object": "PlayerwithSlingshot"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 218359010250728,
-									"parameters": {
-										"variable": "Player_Health",
-										"value": "1"
-									}
-								}
-							],
-							"sid": 470048245736145
 						}
 					],
 					"sid": 419485370773387
@@ -1402,11 +1234,11 @@
 									],
 									"actions": [
 										{
-											"id": "subtract-from-eventvar",
-											"objectClass": "System",
-											"sid": 959293519625658,
+											"id": "subtract-from-instvar",
+											"objectClass": "Player",
+											"sid": 241186795511868,
 											"parameters": {
-												"variable": "Player_Health",
+												"instance-variable": "Health",
 												"value": "3"
 											}
 										},

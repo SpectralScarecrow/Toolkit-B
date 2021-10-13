@@ -9,6 +9,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 634775619136697
+		},
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "",
+			"sid": 717546488356642
 		}
 	],
 	"behaviorTypes": [

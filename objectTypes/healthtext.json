@@ -1,7 +1,7 @@
 {
-	"name": "Display_Score_Value",
+	"name": "HealthText",
 	"plugin-id": "Text",
-	"sid": 809065860323526,
+	"sid": 693209621845788,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
