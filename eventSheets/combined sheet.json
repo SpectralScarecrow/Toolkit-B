@@ -1409,6 +1409,17 @@
 												"variable": "Player_Health",
 												"value": "3"
 											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 661710261506436,
+											"parameters": {
+												"audio-file": "fallsound",
+												"loop": "not-looping",
+												"volume": "3",
+												"tag-optional": "\"\""
+											}
 										}
 									],
 									"sid": 375419643803863
@@ -1487,6 +1498,17 @@
 								"instance-variable": "EnemyHealth",
 								"value": "1"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 796233061354565,
+							"parameters": {
+								"audio-file": "impact",
+								"loop": "not-looping",
+								"volume": "3",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 592723712739561,
@@ -1518,6 +1540,30 @@
 				}
 			],
 			"sid": 417891106613217
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 798602413846215
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 472708020266134,
+					"parameters": {
+						"audio-file": "looperman-l-0102056-0268125-strings-violas-stac-house-130",
+						"loop": "looping",
+						"volume": "1",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 538304928954478
 		}
 	],
 	"sid": 343251894526628
