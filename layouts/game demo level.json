@@ -656,6 +656,9 @@
 							"properties": {
 								"bound-by": "edge"
 							}
+						},
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"world": {

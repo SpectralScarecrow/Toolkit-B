@@ -211,108 +211,6 @@
 						}
 					],
 					"sid": 507194278438945
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "PlayerwithSlingshot",
-							"sid": 190395477333279,
-							"parameters": {
-								"object": "PressurePlate"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PressurePlate",
-							"sid": 163540955331839,
-							"parameters": {
-								"animation": "\"Animation 2\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Static_Platform2",
-							"sid": 170356142383252,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "DanielRadcliffe",
-							"sid": 622202922229330,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "DanielRadcliffe",
-							"sid": 208745593370484,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "DanielRadcliffe",
-							"sid": 769671855677334,
-							"behaviorType": "Solid",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "ToddHoward",
-							"sid": 295951896065128,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "ToddHoward",
-							"sid": 435720030502010,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "box",
-							"sid": 920851430242905,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "box",
-							"sid": 817308708267994,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "box",
-							"sid": 960080742234305,
-							"behaviorType": "Solid",
-							"parameters": {
-								"state": "enabled"
-							}
-						}
-					],
-					"sid": 617166160495004
 				}
 			],
 			"sid": 379522010472795
@@ -534,226 +432,6 @@
 				}
 			],
 			"sid": 305962351160166
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Slingshot and Slime Bullet Script",
-			"description": "This is Raheem's code.",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Player",
-							"sid": 814133947619669,
-							"parameters": {
-								"object": "Slingshot"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-collisions-enabled",
-							"objectClass": "Slingshot",
-							"sid": 987608525662844,
-							"parameters": {
-								"collisions": "disabled"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Player",
-							"sid": 665782644008461,
-							"parameters": {
-								"instance-variable": "HasSlingshot",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 134815219525749
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-created",
-							"objectClass": "SlimeBullet",
-							"sid": 884841171961577
-						},
-						{
-							"id": "is-mirrored",
-							"objectClass": "PlayerwithSlingshot",
-							"sid": 817711746508554
-						}
-					],
-					"actions": [
-						{
-							"id": "set-angle",
-							"objectClass": "SlimeBullet",
-							"sid": 196574051640049,
-							"parameters": {
-								"angle": "180"
-							}
-						}
-					],
-					"sid": 747930217224230
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Player",
-							"sid": 717946143823098,
-							"parameters": {
-								"instance-variable": "HasSlingshot"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position",
-							"objectClass": "Slingshot",
-							"sid": 819933026993729,
-							"parameters": {
-								"x": "Player.ImagePointX(1)",
-								"y": "Player.ImagePointY(1)"
-							}
-						}
-					],
-					"sid": 972108706649960
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Player",
-							"sid": 594289534062432,
-							"parameters": {
-								"instance-variable": "HasSlingshot"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 479678098060751,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 743616962874834,
-									"parameters": {
-										"key": 70
-									}
-								},
-								{
-									"id": "on-click",
-									"objectClass": "Mouse",
-									"sid": 616447832216433,
-									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked"
-									}
-								},
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Keyboard",
-									"sid": 558216660831447,
-									"parameters": {
-										"key": 90
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "spawn-another-object",
-									"objectClass": "Slingshot",
-									"sid": 217463578075879,
-									"parameters": {
-										"object": "SlimeBullet",
-										"layer": "0",
-										"image-point": "0",
-										"create-hierarchy": false
-									}
-								}
-							],
-							"sid": 441264022747874,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-last-created",
-											"objectClass": "System",
-											"sid": 524902163329274,
-											"parameters": {
-												"object": "SlimeBullet"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 436000992780450,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-mirrored",
-													"objectClass": "Player",
-													"sid": 594707142365685
-												}
-											],
-											"actions": [
-												{
-													"id": "set-speed",
-													"objectClass": "SlimeBullet",
-													"sid": 527013743484330,
-													"behaviorType": "Bullet",
-													"parameters": {
-														"speed": "400"
-													}
-												}
-											],
-											"sid": 117796343379799
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-mirrored",
-													"objectClass": "Player",
-													"sid": 919504445068025,
-													"isInverted": true
-												}
-											],
-											"actions": [
-												{
-													"id": "set-speed",
-													"objectClass": "SlimeBullet",
-													"sid": 828301699244578,
-													"behaviorType": "Bullet",
-													"parameters": {
-														"speed": "-400"
-													}
-												}
-											],
-											"sid": 752532721052072
-										}
-									]
-								}
-							],
-							"isOrBlock": true
-						}
-					]
-				}
-			],
-			"sid": 464263342794773
 		},
 		{
 			"eventType": "group",
@@ -1041,6 +719,247 @@
 						}
 					],
 					"sid": 531168529803220
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Slingshot and Slime Bullet Script",
+					"description": "This is Raheem's code.",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player",
+									"sid": 385376990811809,
+									"parameters": {
+										"object": "Slingshot"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-collisions-enabled",
+									"objectClass": "Slingshot",
+									"sid": 190767777820957,
+									"parameters": {
+										"collisions": "disabled"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 296060743939594,
+									"parameters": {
+										"instance-variable": "HasSlingshot",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 421296223039636
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "SlimeBullet",
+									"sid": 808323524656762
+								},
+								{
+									"id": "is-mirrored",
+									"objectClass": "PlayerwithSlingshot",
+									"sid": 249579344676773
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "SlimeBullet",
+									"sid": 552122093982880,
+									"parameters": {
+										"angle": "180"
+									}
+								}
+							],
+							"sid": 269701555567635
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 916138483453709,
+									"parameters": {
+										"instance-variable": "HasSlingshot"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Slingshot",
+									"sid": 481778190899862,
+									"parameters": {
+										"x": "Player.ImagePointX(1)",
+										"y": "Player.ImagePointY(1)"
+									}
+								}
+							],
+							"sid": 529931086492951
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 540148543263181,
+									"parameters": {
+										"instance-variable": "HasSlingshot"
+									}
+								},
+								{
+									"id": "is-timer-running",
+									"objectClass": "Player",
+									"sid": 286567092918288,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"Shoot\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 237885766249522,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 942901721708020,
+											"parameters": {
+												"key": 70
+											}
+										},
+										{
+											"id": "on-click",
+											"objectClass": "Mouse",
+											"sid": 893784174993453,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 937887290483830,
+											"parameters": {
+												"key": 90
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Slingshot",
+											"sid": 465761655095589,
+											"parameters": {
+												"object": "SlimeBullet",
+												"layer": "0",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "start-timer",
+											"objectClass": "Player",
+											"sid": 302744223466086,
+											"behaviorType": "Timer",
+											"parameters": {
+												"duration": "0.5",
+												"type": "once",
+												"tag": "\"Shoot\""
+											}
+										}
+									],
+									"sid": 203225045123458,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-last-created",
+													"objectClass": "System",
+													"sid": 437228800876171,
+													"parameters": {
+														"object": "SlimeBullet"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 448885009380189,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-mirrored",
+															"objectClass": "Player",
+															"sid": 791073385720693
+														}
+													],
+													"actions": [
+														{
+															"id": "set-speed",
+															"objectClass": "SlimeBullet",
+															"sid": 974992043743621,
+															"behaviorType": "Bullet",
+															"parameters": {
+																"speed": "400"
+															}
+														}
+													],
+													"sid": 128586049732297
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-mirrored",
+															"objectClass": "Player",
+															"sid": 924726475832195,
+															"isInverted": true
+														}
+													],
+													"actions": [
+														{
+															"id": "set-speed",
+															"objectClass": "SlimeBullet",
+															"sid": 259753054066159,
+															"behaviorType": "Bullet",
+															"parameters": {
+																"speed": "-400"
+															}
+														}
+													],
+													"sid": 474003259669021
+												}
+											]
+										}
+									],
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 536250096763232
 				}
 			],
 			"sid": 441542195944371
@@ -1083,6 +1002,67 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy_Family",
+							"sid": 505257245175792,
+							"parameters": {
+								"object": "SlimeBullet"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Enemy_Family",
+							"sid": 528590801652787,
+							"parameters": {
+								"instance-variable": "EnemyHealth",
+								"value": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 294902632616369,
+							"parameters": {
+								"audio-file": "impact",
+								"loop": "not-looping",
+								"volume": "3",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 262620038788640,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy_Family",
+									"sid": 414486285178760,
+									"parameters": {
+										"instance-variable": "EnemyHealth",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemy_Family",
+									"sid": 806337701720556
+								}
+							],
+							"sid": 719696895035031
+						}
+					]
+				},
 				{
 					"eventType": "group",
 					"disabled": false,
@@ -1308,67 +1288,6 @@
 						}
 					],
 					"sid": 931557006278316
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Enemy_Family",
-							"sid": 602533524138785,
-							"parameters": {
-								"object": "SlimeBullet"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "subtract-from-instvar",
-							"objectClass": "Enemy_Family",
-							"sid": 918232429613548,
-							"parameters": {
-								"instance-variable": "EnemyHealth",
-								"value": "1"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 796233061354565,
-							"parameters": {
-								"audio-file": "impact",
-								"loop": "not-looping",
-								"volume": "3",
-								"tag-optional": "\"\""
-							}
-						}
-					],
-					"sid": 592723712739561,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Enemy_Family",
-									"sid": 484662964799091,
-									"parameters": {
-										"instance-variable": "EnemyHealth",
-										"comparison": 3,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "Enemy_Family",
-									"sid": 466007244521901
-								}
-							],
-							"sid": 140648033342360
-						}
-					]
 				}
 			],
 			"sid": 417891106613217
