@@ -1163,6 +1163,27 @@
 					],
 					"sid": 629623229646085,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 995413687094455
+						}
+					],
+					"actions": [
+						{
+							"id": "scroll-to-object",
+							"objectClass": "System",
+							"sid": 376613206353109,
+							"parameters": {
+								"object": "Player"
+							}
+						}
+					],
+					"sid": 531168529803220
 				}
 			],
 			"sid": 441542195944371
