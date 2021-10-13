@@ -485,9 +485,158 @@
 							"parameters": {
 								"text": "\"Health: \" & Player.Health"
 							}
+						},
+						{
+							"callFunction": "AddHearts",
+							"sid": 688121035887465
 						}
 					],
 					"sid": 576815846895938
+				},
+				{
+					"functionName": "AddHearts",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "HealthText",
+							"sid": 290811909842175,
+							"parameters": {
+								"text": "\"Health: \" & Player.Health"
+							}
+						}
+					],
+					"sid": 734701550713497,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 201521125648099,
+									"parameters": {
+										"first-value": "Player.Health",
+										"comparison": 4,
+										"second-value": "SlimeHeart.Count"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 204626822973781,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 412951193260160,
+											"parameters": {
+												"name": "\"AddHeartLoop\"",
+												"start-index": "1",
+												"end-index": "Player.Health - SlimeHeart.Count"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 403833542391664,
+											"parameters": {
+												"object-to-create": "SlimeHeart",
+												"layer": "2",
+												"x": "40 + (10 * (loopindex + SlimeHeart.Count - 1))",
+												"y": "40",
+												"create-hierarchy": false
+											}
+										}
+									],
+									"sid": 738606580935510
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "RemoveHearts",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "HealthText",
+							"sid": 761068144034326,
+							"parameters": {
+								"text": "\"Health: \" & Player.Health"
+							}
+						}
+					],
+					"sid": 471552183237537,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 245728666100505,
+									"parameters": {
+										"first-value": "Player.Health",
+										"comparison": 2,
+										"second-value": "SlimeHeart.Count"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 506419167875589,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 903204591532895,
+											"parameters": {
+												"name": "\"AddHeartLoop\"",
+												"start-index": "1",
+												"end-index": "Player.Health - SlimeHeart.Count"
+											}
+										},
+										{
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 654848580823840,
+											"parameters": {
+												"object": "SlimeHeart"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "SlimeHeart",
+											"sid": 955819448915218
+										}
+									],
+									"sid": 845294959331196
+								}
+							]
+						}
+					]
 				}
 			],
 			"sid": 311483450890113
@@ -1167,6 +1316,10 @@
 										"instance-variable": "Health",
 										"value": "1"
 									}
+								},
+								{
+									"callFunction": "RemoveHearts",
+									"sid": 749119555042647
 								}
 							],
 							"sid": 193914316580202
@@ -1243,6 +1396,10 @@
 												"instance-variable": "Health",
 												"value": "3"
 											}
+										},
+										{
+											"callFunction": "RemoveHearts",
+											"sid": 593577151533088
 										},
 										{
 											"id": "play",

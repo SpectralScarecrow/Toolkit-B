@@ -167,7 +167,8 @@
 			"Slingshot",
 			"Static_Platform2",
 			"Text",
-			"TestText"
+			"TestText",
+			"Sprite"
 		],
 		"subfolders": [
 			{
@@ -222,7 +223,8 @@
 			},
 			{
 				"items": [
-					"HealthText"
+					"HealthText",
+					"SlimeHeart"
 				],
 				"subfolders": [],
 				"name": "HUD"
