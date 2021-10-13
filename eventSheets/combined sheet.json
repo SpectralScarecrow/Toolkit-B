@@ -208,6 +208,17 @@
 							"parameters": {
 								"state": "enabled"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 413360673411931,
+							"parameters": {
+								"audio-file": "mechanical_clicks04_2",
+								"loop": "not-looping",
+								"volume": "1",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 507194278438945
@@ -693,6 +704,17 @@
 							"behaviorType": "Platform",
 							"parameters": {
 								"control": "jump"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 733190793437443,
+							"parameters": {
+								"audio-file": "swosh09_1",
+								"loop": "not-looping",
+								"volume": "1",
+								"tag-optional": "\"\""
 							}
 						}
 					],

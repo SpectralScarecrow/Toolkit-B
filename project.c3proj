@@ -275,6 +275,16 @@
 					"name": "fallsound.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 401004942912904
+				},
+				{
+					"name": "swosh09_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 685777839534650
+				},
+				{
+					"name": "mechanical_clicks04_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 686340334123608
 				}
 			],
 			"subfolders": []
