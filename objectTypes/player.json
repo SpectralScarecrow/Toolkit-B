@@ -15,6 +15,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 717546488356642
+		},
+		{
+			"name": "CanDamage",
+			"type": "boolean",
+			"desc": "",
+			"sid": 745483388760052
 		}
 	],
 	"behaviorTypes": [
@@ -34,7 +40,12 @@
 			"sid": 141798792192026
 		}
 	],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "warpobject",
+			"name": "WarpObject"
+		}
+	],
 	"animations": {
 		"items": [
 			{

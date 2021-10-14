@@ -18,6 +18,14 @@
 							"parameters": {
 								"object": "PressurePlate"
 							}
+						},
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "box",
+							"sid": 234804276304291,
+							"parameters": {
+								"object": "PressurePlate"
+							}
 						}
 					],
 					"actions": [
@@ -34,23 +42,6 @@
 							"id": "set-visible",
 							"objectClass": "Static_Platform2",
 							"sid": 926199548208978,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "ToddHoward",
-							"sid": 763137920217822,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "ToddHoward",
-							"sid": 318028877960309,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -82,77 +73,47 @@
 							}
 						}
 					],
-					"sid": 561993867637243
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+					"sid": 561993867637243,
+					"children": [
 						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "box",
-							"sid": 629373387804941,
-							"parameters": {
-								"object": "PressurePlate"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "PressurePlate",
+									"sid": 210230108996958,
+									"parameters": {
+										"instance-variable": "Active"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 323091837626456,
+									"parameters": {
+										"audio-file": "mechanical_clicks04_2",
+										"loop": "not-looping",
+										"volume": "1",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "PressurePlate",
+									"sid": 851731174124184,
+									"parameters": {
+										"instance-variable": "Active",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 983036877388015
 						}
 					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Static_Platform2",
-							"sid": 957278932698627,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "PressurePlate",
-							"sid": 243792351353964,
-							"parameters": {
-								"animation": "\"Animation 2\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "box",
-							"sid": 329300300583929,
-							"behaviorType": "Platform",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "box",
-							"sid": 407190384195982,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "box",
-							"sid": 842870035569905,
-							"behaviorType": "Solid",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 413360673411931,
-							"parameters": {
-								"audio-file": "mechanical_clicks04_2",
-								"loop": "not-looping",
-								"volume": "1",
-								"tag-optional": "\"\""
-							}
-						}
-					],
-					"sid": 507194278438945
+					"isOrBlock": true
 				}
 			],
 			"sid": 379522010472795
@@ -1062,6 +1023,115 @@
 						}
 					],
 					"sid": 536250096763232
+				},
+				{
+					"functionName": "DamagePlayer",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "DamageAmount",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"sid": 327971667629975
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "is-timer-running",
+							"objectClass": "Player",
+							"sid": 352355833796729,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"Invincible\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Player",
+							"sid": 866773760929000,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "DamageAmount"
+							}
+						},
+						{
+							"callFunction": "RemoveHearts",
+							"sid": 857310806117734
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "Player",
+							"sid": 529221149909170,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "0.3",
+								"type": "once",
+								"tag": "\"Invincible\""
+							}
+						}
+					],
+					"sid": 533221537808945
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-timer-running",
+							"objectClass": "Player",
+							"sid": 296653061312188,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"Invincible\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "Player",
+							"sid": 850068775362904,
+							"parameters": {
+								"mode": "disable",
+								"effect": "\"WarpObject\""
+							}
+						}
+					],
+					"sid": 685840478178267
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-timer-running",
+							"objectClass": "Player",
+							"sid": 789151060516721,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"Invincible\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "Player",
+							"sid": 588528316407803,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"WarpObject\""
+							}
+						}
+					],
+					"sid": 416488204838894
 				}
 			],
 			"sid": 441542195944371
@@ -1125,6 +1195,11 @@
 								"instance-variable": "EnemyHealth",
 								"value": "1"
 							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SlimeBullet",
+							"sid": 159268998070708
 						},
 						{
 							"id": "play",
@@ -1240,17 +1315,11 @@
 							],
 							"actions": [
 								{
-									"id": "subtract-from-instvar",
-									"objectClass": "Player",
-									"sid": 115476583663091,
-									"parameters": {
-										"instance-variable": "Health",
-										"value": "1"
-									}
-								},
-								{
-									"callFunction": "RemoveHearts",
-									"sid": 749119555042647
+									"callFunction": "DamagePlayer",
+									"sid": 787697580658007,
+									"parameters": [
+										"1"
+									]
 								}
 							],
 							"sid": 193914316580202
@@ -1320,17 +1389,11 @@
 									],
 									"actions": [
 										{
-											"id": "subtract-from-instvar",
-											"objectClass": "Player",
-											"sid": 241186795511868,
-											"parameters": {
-												"instance-variable": "Health",
-												"value": "3"
-											}
-										},
-										{
-											"callFunction": "RemoveHearts",
-											"sid": 593577151533088
+											"callFunction": "DamagePlayer",
+											"sid": 412959445278434,
+											"parameters": [
+												"10"
+											]
 										},
 										{
 											"id": "play",

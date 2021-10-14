@@ -389,7 +389,9 @@
 						"live-preview": false
 					},
 					"uid": 41,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Active": false
+					},
 					"behaviors": {
 						"Solid": {
 							"properties": {
@@ -453,7 +455,7 @@
 				{
 					"type": "DanielRadcliffe",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -475,7 +477,7 @@
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
-								"enabled": false
+								"enabled": true
 							}
 						},
 						"MoveTo": {
@@ -499,7 +501,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": false,
+								"enabled": true,
 								"tags": ""
 							}
 						}
@@ -524,7 +526,7 @@
 				{
 					"type": "ToddHoward",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -546,7 +548,7 @@
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
-								"enabled": false
+								"enabled": true
 							}
 						},
 						"Solid": {
@@ -635,7 +637,8 @@
 					"uid": 46,
 					"instanceVariables": {
 						"HasSlingshot": false,
-						"Health": 0
+						"Health": 3,
+						"CanDamage": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -659,6 +662,18 @@
 						},
 						"Timer": {
 							"properties": {}
+						}
+					},
+					"effects": {
+						"WarpObject": {
+							"parameters": {
+								"x-frequency": 4,
+								"y-frequency": 4,
+								"x-amplitude": 1,
+								"y-amplitude": 1,
+								"x-speed": 5,
+								"y-speed": 1
+							}
 						}
 					},
 					"world": {

@@ -154,7 +154,8 @@
 					"uid": 9,
 					"instanceVariables": {
 						"HasSlingshot": false,
-						"Health": 3
+						"Health": 3,
+						"CanDamage": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -178,6 +179,18 @@
 						},
 						"Timer": {
 							"properties": {}
+						}
+					},
+					"effects": {
+						"WarpObject": {
+							"parameters": {
+								"x-frequency": 4,
+								"y-frequency": 4,
+								"x-amplitude": 10,
+								"y-amplitude": 10,
+								"x-speed": 1,
+								"y-speed": 1
+							}
 						}
 					},
 					"world": {

@@ -149,6 +149,14 @@
 			"author": "Viktor Korsun",
 			"version": "r260",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "warpobject",
+			"name": "Warp object",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
 		}
 	],
 	"uniqueId": "hda4p085pyy",

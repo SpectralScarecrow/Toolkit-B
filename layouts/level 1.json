@@ -235,7 +235,7 @@
 				{
 					"type": "DanielRadcliffe",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -257,7 +257,7 @@
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
-								"enabled": false
+								"enabled": true
 							}
 						},
 						"MoveTo": {
@@ -281,7 +281,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": false,
+								"enabled": true,
 								"tags": ""
 							}
 						}
@@ -990,7 +990,7 @@
 				{
 					"type": "DanielRadcliffe",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1012,7 +1012,7 @@
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
-								"enabled": false
+								"enabled": true
 							}
 						},
 						"MoveTo": {
@@ -1036,7 +1036,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": false,
+								"enabled": true,
 								"tags": ""
 							}
 						}
@@ -1061,7 +1061,7 @@
 				{
 					"type": "DanielRadcliffe",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1083,7 +1083,7 @@
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
-								"enabled": false
+								"enabled": true
 							}
 						},
 						"MoveTo": {
@@ -1107,7 +1107,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": false,
+								"enabled": true,
 								"tags": ""
 							}
 						}
@@ -1470,7 +1470,9 @@
 						"live-preview": false
 					},
 					"uid": 56,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Active": false
+					},
 					"behaviors": {
 						"Solid": {
 							"properties": {
@@ -1622,7 +1624,7 @@
 				{
 					"type": "box",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1633,7 +1635,7 @@
 					"behaviors": {
 						"Solid": {
 							"properties": {
-								"enabled": false,
+								"enabled": true,
 								"tags": ""
 							}
 						},
@@ -1648,7 +1650,7 @@
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
-								"enabled": false
+								"enabled": true
 							}
 						}
 					},
@@ -1681,7 +1683,8 @@
 					"uid": 61,
 					"instanceVariables": {
 						"HasSlingshot": false,
-						"Health": 3
+						"Health": 3,
+						"CanDamage": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -1705,6 +1708,18 @@
 						},
 						"Timer": {
 							"properties": {}
+						}
+					},
+					"effects": {
+						"WarpObject": {
+							"parameters": {
+								"x-frequency": 4,
+								"y-frequency": 4,
+								"x-amplitude": 1,
+								"y-amplitude": 1,
+								"x-speed": 5,
+								"y-speed": 1
+							}
 						}
 					},
 					"world": {
