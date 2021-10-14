@@ -971,8 +971,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 188,
-						"y": 354,
+						"x": 184,
+						"y": 337,
 						"width": 42.95346318982905,
 						"height": 42.95346318982905,
 						"originX": 0.5,
@@ -1126,6 +1126,42 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spike",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 64,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 620,
+						"y": 353.97287256048287,
+						"width": 121,
+						"height": 43,
+						"originX": 0.4854771784232365,
+						"originY": 0.6768558951965066,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5707963267948966,
 						"zElevation": 0
 					}
 				}
