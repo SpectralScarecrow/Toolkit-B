@@ -1458,6 +1458,37 @@
 								}
 							],
 							"sid": 641378261856284
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 119035274238265
+								},
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "ToddHoward",
+									"sid": 181202062886690,
+									"parameters": {
+										"which": "nearest",
+										"x": "Player.X",
+										"y": "Player.Y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "TestText",
+									"sid": 768983393868997,
+									"parameters": {
+										"text": "\"Player: \" & Player.Y & \" Todd: \"&  ToddHoward.Y"
+									}
+								}
+							],
+							"sid": 234733383371502
 						}
 					],
 					"sid": 931557006278316
