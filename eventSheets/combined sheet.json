@@ -1415,49 +1415,68 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-y",
+									"id": "pick-nearestfurthest",
 									"objectClass": "ToddHoward",
-									"sid": 102466569916829,
+									"sid": 880739405874220,
 									"parameters": {
-										"comparison": 2,
-										"y-co-ordinate": "Player.Y - 10"
+										"which": "nearest",
+										"x": "Player.X",
+										"y": "Player.Y"
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 550408803374141,
+							"children": [
 								{
-									"id": "set-boolean-instvar",
-									"objectClass": "ToddHoward",
-									"sid": 110324011175221,
-									"parameters": {
-										"instance-variable": "DealDamage",
-										"value": "true"
-									}
-								}
-							],
-							"sid": 550408803374141
-						},
-						{
-							"eventType": "block",
-							"conditions": [
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-y",
+											"objectClass": "ToddHoward",
+											"sid": 537306810643302,
+											"parameters": {
+												"comparison": 2,
+												"y-co-ordinate": "Player.Y - 10"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "ToddHoward",
+											"sid": 196685347614277,
+											"parameters": {
+												"instance-variable": "DealDamage",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 394444317557623
+								},
 								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 580006349815636
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 536970681461686
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "ToddHoward",
+											"sid": 147474506718018,
+											"parameters": {
+												"instance-variable": "DealDamage",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 309926493672560
 								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "ToddHoward",
-									"sid": 600658668263945,
-									"parameters": {
-										"instance-variable": "DealDamage",
-										"value": "false"
-									}
-								}
-							],
-							"sid": 641378261856284
+							]
 						},
 						{
 							"eventType": "block",

@@ -167,13 +167,11 @@
 			"Player",
 			"box",
 			"hitBox",
-			"Static_Platform",
 			"Ground",
 			"PlayerTest",
 			"PressurePlate",
 			"PressurePlateTrigger",
 			"Slingshot",
-			"Static_Platform2",
 			"Text",
 			"TestText",
 			"Sprite"
@@ -182,10 +180,12 @@
 			{
 				"items": [
 					"Moving_Platform_Horizontal",
-					"Moving_Platform_Vertical"
+					"Moving_Platform_Vertical",
+					"Static_Platform",
+					"Static_Platform2"
 				],
 				"subfolders": [],
-				"name": "Moving_Platforms"
+				"name": "Platforms"
 			},
 			{
 				"items": [
