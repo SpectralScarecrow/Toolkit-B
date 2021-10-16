@@ -1338,32 +1338,6 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-x",
-									"objectClass": "Player",
-									"sid": 959489579770040,
-									"parameters": {
-										"comparison": 4,
-										"x-co-ordinate": "ToddHoward.X - 64"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-gravity",
-									"objectClass": "ToddHoward",
-									"sid": 170195204025365,
-									"behaviorType": "Platform",
-									"parameters": {
-										"gravity": "3000"
-									}
-								}
-							],
-							"sid": 808148998483062
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "ToddHoward",
 									"sid": 965863942943985,
@@ -1428,6 +1402,32 @@
 							"actions": [],
 							"sid": 550408803374141,
 							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Player",
+											"sid": 616145518180927,
+											"parameters": {
+												"comparison": 4,
+												"x-co-ordinate": "ToddHoward.X - 64"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-gravity",
+											"objectClass": "ToddHoward",
+											"sid": 378701027254400,
+											"behaviorType": "Platform",
+											"parameters": {
+												"gravity": "3000"
+											}
+										}
+									],
+									"sid": 739223999782410
+								},
 								{
 									"eventType": "block",
 									"conditions": [
@@ -1534,6 +1534,15 @@
 						"loop": "looping",
 						"volume": "1",
 						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-solid-collision-filter",
+					"objectClass": "Player",
+					"sid": 595063983587113,
+					"parameters": {
+						"mode": "exclusive",
+						"tags": "\"Platform\""
 					}
 				}
 			],
