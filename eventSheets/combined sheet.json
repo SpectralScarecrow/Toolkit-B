@@ -1528,11 +1528,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 472708020266134,
+					"sid": 609836102468923,
 					"parameters": {
 						"audio-file": "looperman-l-0102056-0268125-strings-violas-stac-house-130",
 						"loop": "looping",
-						"volume": "1",
+						"volume": "-1",
 						"tag-optional": "\"\""
 					}
 				},
