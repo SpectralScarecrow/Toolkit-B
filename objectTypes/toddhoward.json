@@ -9,6 +9,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 318546578630164
+		},
+		{
+			"name": "HasFallen",
+			"type": "boolean",
+			"desc": "",
+			"sid": 692001415136075
 		}
 	],
 	"behaviorTypes": [
@@ -21,6 +27,11 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 959824251259226
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 825119288114518
 		}
 	],
 	"effectTypes": [],

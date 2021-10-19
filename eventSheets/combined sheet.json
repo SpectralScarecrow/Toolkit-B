@@ -1354,60 +1354,9 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "ToddHoward",
-									"sid": 965863942943985,
-									"parameters": {
-										"instance-variable": "DealDamage"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 712242058971315,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-collision-with-another-object",
-											"objectClass": "ToddHoward",
-											"sid": 763300296398716,
-											"parameters": {
-												"object": "Player"
-											}
-										}
-									],
-									"actions": [
-										{
-											"callFunction": "DamagePlayer",
-											"sid": 412959445278434,
-											"parameters": [
-												"10"
-											]
-										},
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 661710261506436,
-											"parameters": {
-												"audio-file": "fallsound",
-												"loop": "not-looping",
-												"volume": "3",
-												"tag-optional": "\"\""
-											}
-										}
-									],
-									"sid": 375419643803863
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "pick-nearestfurthest",
 									"objectClass": "ToddHoward",
-									"sid": 880739405874220,
+									"sid": 895890650488481,
 									"parameters": {
 										"which": "nearest",
 										"x": "Player.X",
@@ -1416,81 +1365,182 @@
 								}
 							],
 							"actions": [],
-							"sid": 550408803374141,
+							"sid": 496972957477074,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-x",
-											"objectClass": "Player",
-											"sid": 616145518180927,
-											"parameters": {
-												"comparison": 4,
-												"x-co-ordinate": "ToddHoward.X - 64"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-gravity",
+											"id": "is-boolean-instance-variable-set",
 											"objectClass": "ToddHoward",
-											"sid": 378701027254400,
-											"behaviorType": "Platform",
+											"sid": 802223065946405,
 											"parameters": {
-												"gravity": "3000"
-											}
-										}
-									],
-									"sid": 739223999782410
-								},
-								{
-									"eventType": "block",
-									"conditions": [
+												"instance-variable": "HasFallen"
+											},
+											"isInverted": true
+										},
 										{
 											"id": "compare-y",
 											"objectClass": "ToddHoward",
-											"sid": 537306810643302,
+											"sid": 311132210975089,
 											"parameters": {
 												"comparison": 2,
-												"y-co-ordinate": "Player.Y - 10"
+												"y-co-ordinate": "Player.Y"
 											}
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 404027536027251,
+									"children": [
 										{
-											"id": "set-boolean-instvar",
-											"objectClass": "ToddHoward",
-											"sid": 196685347614277,
-											"parameters": {
-												"instance-variable": "DealDamage",
-												"value": "true"
-											}
-										}
-									],
-									"sid": 394444317557623
-								},
-								{
-									"eventType": "block",
-									"conditions": [
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-x",
+													"objectClass": "Player",
+													"sid": 876385527094926,
+													"parameters": {
+														"comparison": 4,
+														"x-co-ordinate": "ToddHoward.X - 64"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-gravity",
+													"objectClass": "ToddHoward",
+													"sid": 834236197192472,
+													"behaviorType": "Platform",
+													"parameters": {
+														"gravity": "3000"
+													}
+												}
+											],
+											"sid": 739594467956443
+										},
 										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 536970681461686
-										}
-									],
-									"actions": [
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-y",
+													"objectClass": "ToddHoward",
+													"sid": 653570893431126,
+													"parameters": {
+														"comparison": 2,
+														"y-co-ordinate": "Player.Y - 10"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "ToddHoward",
+													"sid": 156771308136855,
+													"parameters": {
+														"instance-variable": "DealDamage",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 306842464615982
+										},
 										{
-											"id": "set-boolean-instvar",
-											"objectClass": "ToddHoward",
-											"sid": 147474506718018,
-											"parameters": {
-												"instance-variable": "DealDamage",
-												"value": "false"
-											}
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 518097425998301
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "ToddHoward",
+													"sid": 298401797884500,
+													"parameters": {
+														"instance-variable": "DealDamage",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 204811817062415
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "ToddHoward",
+													"sid": 233959549473834,
+													"parameters": {
+														"instance-variable": "DealDamage"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 515166421057991,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "on-collision-with-another-object",
+															"objectClass": "ToddHoward",
+															"sid": 897884646479821,
+															"parameters": {
+																"object": "Player"
+															}
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "DamagePlayer",
+															"sid": 379372677544415,
+															"parameters": [
+																"10"
+															]
+														}
+													],
+													"sid": 872477727170964
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-on-floor",
+													"objectClass": "ToddHoward",
+													"sid": 376792727954346,
+													"behaviorType": "Platform"
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "ToddHoward",
+													"sid": 425733253720198,
+													"parameters": {
+														"instance-variable": "HasFallen",
+														"value": "true"
+													}
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 216276196837828,
+													"parameters": {
+														"audio-file": "fallsound",
+														"loop": "not-looping",
+														"volume": "3",
+														"tag-optional": "\"\""
+													}
+												}
+											],
+											"sid": 509568551453197
 										}
-									],
-									"sid": 309926493672560
+									]
 								}
 							]
 						},
@@ -1524,78 +1574,6 @@
 								}
 							],
 							"sid": 234733383371502
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 891001721347149
-								}
-							],
-							"actions": [],
-							"sid": 927858597405360,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-nearestfurthest",
-											"objectClass": "Platforms",
-											"sid": 166246921020408,
-											"parameters": {
-												"which": "nearest",
-												"x": "Player.X",
-												"y": "Player.Y"
-											}
-										},
-										{
-											"id": "compare-y",
-											"objectClass": "Platforms",
-											"sid": 618814125147304,
-											"parameters": {
-												"comparison": 5,
-												"y-co-ordinate": "Player.Y"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "Platforms",
-											"sid": 425864216057798,
-											"behaviorType": "Jumpthru",
-											"parameters": {
-												"state": "enabled"
-											}
-										}
-									],
-									"sid": 118421587159211
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 315272395549962
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "Platforms",
-											"sid": 154340870606739,
-											"behaviorType": "Jumpthru",
-											"parameters": {
-												"state": "disabled"
-											}
-										}
-									],
-									"sid": 546039670767918
-								}
-							]
 						}
 					],
 					"sid": 931557006278316

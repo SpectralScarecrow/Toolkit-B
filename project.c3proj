@@ -96,16 +96,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "MoveTo",
-			"name": "Move To",
+			"id": "LOS",
+			"name": "Line of sight",
 			"author": "Scirra",
 			"version": "r268",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "LOS",
-			"name": "Line of sight",
+			"id": "MoveTo",
+			"name": "Move To",
 			"author": "Scirra",
 			"version": "r268",
 			"bundled": false

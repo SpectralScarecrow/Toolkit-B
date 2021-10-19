@@ -199,7 +199,8 @@
 					},
 					"uid": 136,
 					"instanceVariables": {
-						"DealDamage": true
+						"DealDamage": true,
+						"HasFallen": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -220,6 +221,14 @@
 							"properties": {
 								"enabled": true,
 								"tags": ""
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
 							}
 						}
 					},
@@ -1813,7 +1822,8 @@
 					},
 					"uid": 156,
 					"instanceVariables": {
-						"DealDamage": true
+						"DealDamage": true,
+						"HasFallen": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -1834,6 +1844,14 @@
 							"properties": {
 								"enabled": true,
 								"tags": ""
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
 							}
 						}
 					},
