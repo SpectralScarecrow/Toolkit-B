@@ -746,20 +746,36 @@
 							"parameters": {
 								"control": "jump"
 							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 733190793437443,
-							"parameters": {
-								"audio-file": "swosh09_1",
-								"loop": "not-looping",
-								"volume": "1",
-								"tag-optional": "\"\""
-							}
 						}
 					],
 					"sid": 629623229646085,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-floor",
+									"objectClass": "Player",
+									"sid": 194205246545588,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 379927854097043,
+									"parameters": {
+										"audio-file": "swosh09_1",
+										"loop": "not-looping",
+										"volume": "1",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 920370709214079
+						}
+					],
 					"isOrBlock": true
 				},
 				{
@@ -1508,6 +1524,78 @@
 								}
 							],
 							"sid": 234733383371502
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 891001721347149
+								}
+							],
+							"actions": [],
+							"sid": 927858597405360,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-nearestfurthest",
+											"objectClass": "Platforms",
+											"sid": 166246921020408,
+											"parameters": {
+												"which": "nearest",
+												"x": "Player.X",
+												"y": "Player.Y"
+											}
+										},
+										{
+											"id": "compare-y",
+											"objectClass": "Platforms",
+											"sid": 618814125147304,
+											"parameters": {
+												"comparison": 5,
+												"y-co-ordinate": "Player.Y"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Platforms",
+											"sid": 425864216057798,
+											"behaviorType": "Jumpthru",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 118421587159211
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 315272395549962
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Platforms",
+											"sid": 154340870606739,
+											"behaviorType": "Jumpthru",
+											"parameters": {
+												"state": "disabled"
+											}
+										}
+									],
+									"sid": 546039670767918
+								}
+							]
 						}
 					],
 					"sid": 931557006278316

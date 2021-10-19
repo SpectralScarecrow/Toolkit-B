@@ -101,7 +101,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": "box"
+								"tags": ""
 							}
 						},
 						"Platform": {
@@ -158,6 +158,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -450,6 +451,11 @@
 					"uid": 92,
 					"instanceVariables": {},
 					"behaviors": {
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "vertical",
@@ -462,11 +468,6 @@
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
-							}
-						},
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
 							}
 						},
 						"Solid": {
@@ -1044,6 +1045,58 @@
 					}
 				},
 				{
+					"type": "ToddHoward",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 169,
+					"instanceVariables": {
+						"DealDamage": false
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 330,
+								"acceleration": 1500,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 0,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 623,
+						"y": 1100,
+						"width": 71.168,
+						"height": 67.584,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "Slingshot",
 					"properties": {
 						"initially-visible": true,
@@ -1094,6 +1147,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -1325,6 +1379,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -1339,5 +1394,6 @@
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
+	"projection": "perspective",
 	"eventSheet": "Combined Sheet"
 }

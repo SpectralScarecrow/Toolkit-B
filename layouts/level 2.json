@@ -96,6 +96,11 @@
 					"uid": 123,
 					"instanceVariables": {},
 					"behaviors": {
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "horizontal",
@@ -108,11 +113,6 @@
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
-							}
-						},
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
 							}
 						}
 					},
@@ -145,6 +145,11 @@
 					"uid": 126,
 					"instanceVariables": {},
 					"behaviors": {
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "vertical",
@@ -157,11 +162,6 @@
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
-							}
-						},
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
 							}
 						},
 						"Solid": {
@@ -288,6 +288,11 @@
 					"uid": 111,
 					"instanceVariables": {},
 					"behaviors": {
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "vertical",
@@ -300,11 +305,6 @@
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
-							}
-						},
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
 							}
 						},
 						"Solid": {
@@ -676,6 +676,11 @@
 					"uid": 122,
 					"instanceVariables": {},
 					"behaviors": {
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "vertical",
@@ -688,11 +693,6 @@
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
-							}
-						},
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
 							}
 						},
 						"Solid": {
@@ -801,6 +801,11 @@
 					"uid": 138,
 					"instanceVariables": {},
 					"behaviors": {
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "horizontal",
@@ -813,11 +818,6 @@
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
-							}
-						},
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
 							}
 						}
 					},
@@ -1517,6 +1517,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -1972,6 +1973,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -2161,6 +2163,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -2175,5 +2178,6 @@
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
+	"projection": "perspective",
 	"eventSheet": "Combined Sheet"
 }

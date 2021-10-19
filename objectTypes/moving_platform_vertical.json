@@ -11,11 +11,6 @@
 			"sid": 651183450307873
 		},
 		{
-			"behaviorId": "jumpthru",
-			"name": "Jumpthru",
-			"sid": 339105006736903
-		},
-		{
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 412720085810284

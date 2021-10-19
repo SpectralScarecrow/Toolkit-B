@@ -4,13 +4,7 @@
 	"sid": 257830518118768,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "jumpthru",
-			"name": "Jumpthru",
-			"sid": 738457579643136
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [

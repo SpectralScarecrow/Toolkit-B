@@ -106,6 +106,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -242,6 +243,11 @@
 					"uid": 25,
 					"instanceVariables": {},
 					"behaviors": {
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "horizontal",
@@ -254,11 +260,6 @@
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
-							}
-						},
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
 							}
 						}
 					},
@@ -291,6 +292,11 @@
 					"uid": 22,
 					"instanceVariables": {},
 					"behaviors": {
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "vertical",
@@ -303,11 +309,6 @@
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
-							}
-						},
-						"Jumpthru": {
-							"properties": {
-								"enabled": true
 							}
 						},
 						"Solid": {
@@ -750,6 +751,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -780,6 +782,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -794,5 +797,6 @@
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
+	"projection": "perspective",
 	"eventSheet": "Combined Sheet"
 }
