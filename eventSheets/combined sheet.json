@@ -1359,57 +1359,81 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "compare-y",
+									"objectClass": "ToddHoward",
+									"sid": 434999348522425,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "Player.Y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "ToddHoward",
+									"sid": 673983240756364,
+									"parameters": {
+										"instance-variable": "DealDamage",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 403429683109755
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 954533489053780
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "ToddHoward",
+									"sid": 747470858649811,
+									"parameters": {
+										"instance-variable": "DealDamage",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 257901804434446
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "is-on-floor",
 									"objectClass": "ToddHoward",
 									"sid": 852442355318446,
 									"behaviorType": "Platform"
 								}
 							],
-							"actions": [],
-							"sid": 514902673134084,
-							"children": [
+							"actions": [
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 246363592581875
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 287401480636700,
-											"parameters": {
-												"audio-file": "fallsound",
-												"loop": "not-looping",
-												"volume": "3",
-												"tag-optional": "\"\""
-											}
-										},
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 952169085080700,
-											"parameters": {
-												"seconds": "1.0"
-											}
-										},
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "ToddHoward",
-											"sid": 831651616324721,
-											"parameters": {
-												"instance-variable": "HasFallen",
-												"value": "true"
-											}
-										}
-									],
-									"sid": 977651563392467
+									"id": "set-boolean-instvar",
+									"objectClass": "ToddHoward",
+									"sid": 478393063279752,
+									"parameters": {
+										"instance-variable": "HasFallen",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-solid-collision-filter",
+									"objectClass": "ToddHoward",
+									"sid": 662047052572390,
+									"parameters": {
+										"mode": "exclusive",
+										"tags": "\"\""
+									}
 								}
-							]
+							],
+							"sid": 514902673134084
 						},
 						{
 							"eventType": "block",
@@ -1445,6 +1469,7 @@
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "ToddHoward",
 											"sid": 802223065946405,
+											"disabled": true,
 											"parameters": {
 												"instance-variable": "HasFallen"
 											},
@@ -1486,57 +1511,18 @@
 													"parameters": {
 														"gravity": "3000"
 													}
+												},
+												{
+													"id": "set-solid-collision-filter",
+													"objectClass": "ToddHoward",
+													"sid": 956097990998822,
+													"parameters": {
+														"mode": "exclusive",
+														"tags": "\"Platform\""
+													}
 												}
 											],
 											"sid": 739594467956443
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-y",
-													"objectClass": "ToddHoward",
-													"sid": 653570893431126,
-													"parameters": {
-														"comparison": 2,
-														"y-co-ordinate": "Player.Y - 10"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "ToddHoward",
-													"sid": 156771308136855,
-													"parameters": {
-														"instance-variable": "DealDamage",
-														"value": "true"
-													}
-												}
-											],
-											"sid": 306842464615982
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "else",
-													"objectClass": "System",
-													"sid": 518097425998301
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "ToddHoward",
-													"sid": 298401797884500,
-													"parameters": {
-														"instance-variable": "DealDamage",
-														"value": "false"
-													}
-												}
-											],
-											"sid": 204811817062415
 										},
 										{
 											"eventType": "block",
@@ -1574,7 +1560,8 @@
 															]
 														}
 													],
-													"sid": 872477727170964
+													"sid": 872477727170964,
+													"isOrBlock": true
 												}
 											]
 										}
@@ -1605,9 +1592,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "TestText",
-									"sid": 768983393868997,
+									"sid": 698843780280825,
 									"parameters": {
-										"text": "\"Player: \" & Player.Y & \" Todd: \"&  ToddHoward.Y"
+										"text": "\"Player: \" & round(Player.Y) & \" Todd: \"&  round(ToddHoward.Y) & \"Deal Damage:\" & ToddHoward.DealDamage"
 									}
 								}
 							],
@@ -1644,6 +1631,15 @@
 					"id": "set-solid-collision-filter",
 					"objectClass": "Player",
 					"sid": 595063983587113,
+					"parameters": {
+						"mode": "exclusive",
+						"tags": "\"Platform\""
+					}
+				},
+				{
+					"id": "set-solid-collision-filter",
+					"objectClass": "DanielRadcliffe",
+					"sid": 987834539574183,
 					"parameters": {
 						"mode": "exclusive",
 						"tags": "\"Platform\""
