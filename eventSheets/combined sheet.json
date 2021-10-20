@@ -2,6 +2,16 @@
 	"name": "Combined Sheet",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Restarted",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 444852374383315
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Pressure Plate Script",
@@ -1711,6 +1721,15 @@
 					}
 				},
 				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 928941773424737,
+					"behaviorType": "Platform",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 499470561653903,
@@ -1751,9 +1770,55 @@
 					"id": "restart-layout",
 					"objectClass": "System",
 					"sid": 944389722530952
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 422028449632925,
+					"parameters": {
+						"variable": "Restarted",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 659604449977671
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 365867006290210,
+					"parameters": {
+						"variable": "Restarted"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 764554649092407,
+					"parameters": {
+						"object-to-create": "Particles",
+						"layer": "1",
+						"x": "Player.X",
+						"y": "Player.Y",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 121235256451648,
+					"parameters": {
+						"variable": "Restarted",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 697454485869095
 		}
 	],
 	"sid": 343251894526628

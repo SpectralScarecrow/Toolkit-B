@@ -1823,9 +1823,9 @@
 				{
 					"type": "Particles",
 					"properties": {
-						"rate": 10,
+						"rate": 15,
 						"spray-cone": 60,
-						"type": "continuous-spray",
+						"type": "one-shot",
 						"object": -1,
 						"live-preview": false,
 						"speed": 150,
