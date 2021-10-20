@@ -1957,8 +1957,8 @@
 					},
 					"uid": 36,
 					"instanceVariables": {
-						"WinAmount": 3,
-						"NextLevel": ""
+						"WinAmount": 7,
+						"NextLevel": "Level 2"
 					},
 					"behaviors": {},
 					"world": {
