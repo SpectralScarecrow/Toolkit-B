@@ -1213,13 +1213,76 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 561070534240950,
+							"sid": 794364914316335,
+							"parameters": {
+								"layout": "Start_Screen"
+							}
+						}
+					],
+					"sid": 295924730587479
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 909157819755806,
+							"parameters": {
+								"key": 82
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 225463622420543
+						}
+					],
+					"sid": 342258831708144
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "Start_Button",
+							"sid": 329745135207957
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 121920912059323,
 							"parameters": {
 								"layout": "Level 1"
 							}
 						}
 					],
-					"sid": 295924730587479
+					"sid": 492512338362926
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 473454421039983
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 565774900906257,
+							"parameters": {
+								"layout": "Start_Screen"
+							}
+						}
+					],
+					"sid": 776027376092794
 				}
 			],
 			"sid": 715893763735901

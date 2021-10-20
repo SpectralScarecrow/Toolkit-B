@@ -1,0 +1,252 @@
+{
+	"name": "Start_Screen",
+	"layers": [
+		{
+			"name": "Background",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "Background_Art",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 210,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 238.77902509645298,
+						"y": 403.6059428868066,
+						"width": 1401.2505792157303,
+						"height": 831.7916646402284,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "End_Text",
+					"properties": {
+						"text": "Slime Game",
+						"enable-bbcode": true,
+						"font": "Comic Sans MS",
+						"size": 32,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.0392156862745098,
+							0.054901960784313725,
+							0.30196078431372547,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center"
+					},
+					"uid": 214,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 436.4999999999998,
+						"y": 156.41666666666694,
+						"width": 236.63195819957627,
+						"height": 55.83333333333286,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Start_Button",
+					"properties": {
+						"type": "button",
+						"text": "PLAY",
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"auto-font-size": true,
+						"checked": false,
+						"id": ""
+					},
+					"uid": 215,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 388.96683756510424,
+						"y": 200.77080281575482,
+						"width": 93.8682587459682,
+						"height": 31.2894195819894,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "Control_Text",
+					"properties": {
+						"text": "Controls: W(jump), A(left), D(right), LMB(shoot), R(restart)",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 224,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 218.46684773762928,
+						"y": 441.85408528645905,
+						"width": 432.83333333333445,
+						"height": 32.75000000000003,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 819559545674597,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Game Level",
+			"overriden": 0,
+			"instances": [],
+			"sid": 598753608423751,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "HUD and UI Display",
+			"overriden": 0,
+			"instances": [],
+			"sid": 148210875265649,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 504739952827694,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 2000,
+	"height": 2000,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "Combined Sheet"
+}

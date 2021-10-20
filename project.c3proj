@@ -184,7 +184,9 @@
 			"TestText",
 			"GameManager",
 			"End_Text",
-			"Home_Button"
+			"Home_Button",
+			"Start_Button",
+			"Control_Text"
 		],
 		"subfolders": [
 			{
@@ -261,14 +263,11 @@
 	},
 	"layouts": {
 		"items": [
-			"Joey McGuane",
-			"Nalah Tinsley",
-			"Raheem Allen",
-			"Game Demo Level",
+			"Start_Screen",
 			"Level 1",
-			"AUC Level 1",
-			"AUC Level 2",
 			"Level 2",
+			"Level 3",
+			"Level 4",
 			"End_Screen"
 		],
 		"subfolders": []
