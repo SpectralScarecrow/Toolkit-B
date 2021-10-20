@@ -279,8 +279,9 @@
 					"uid": 127,
 					"instanceVariables": {
 						"HasSlingshot": false,
+						"CanDamage": false,
 						"Health": 3,
-						"CanDamage": false
+						"ApplesCollected": 0
 					},
 					"behaviors": {
 						"Platform": {
@@ -1693,7 +1694,7 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "GameManager",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1702,7 +1703,10 @@
 						"live-preview": false
 					},
 					"uid": 130,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"WinAmount": 3,
+						"NextLevel": "Level 1"
+					},
 					"behaviors": {},
 					"world": {
 						"x": -161,

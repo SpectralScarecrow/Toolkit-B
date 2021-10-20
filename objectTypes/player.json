@@ -11,16 +11,22 @@
 			"sid": 634775619136697
 		},
 		{
+			"name": "CanDamage",
+			"type": "boolean",
+			"desc": "",
+			"sid": 745483388760052
+		},
+		{
 			"name": "Health",
 			"type": "number",
 			"desc": "",
 			"sid": 717546488356642
 		},
 		{
-			"name": "CanDamage",
-			"type": "boolean",
+			"name": "ApplesCollected",
+			"type": "number",
 			"desc": "",
-			"sid": 745483388760052
+			"sid": 107755581785883
 		}
 	],
 	"behaviorTypes": [

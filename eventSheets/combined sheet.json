@@ -362,25 +362,26 @@
 					],
 					"actions": [
 						{
+							"id": "destroy",
+							"objectClass": "Apple",
+							"sid": 589944541073632
+						},
+						{
 							"id": "add-to-instvar",
 							"objectClass": "Player",
-							"sid": 842151759304163,
+							"sid": 820973151133954,
 							"parameters": {
 								"instance-variable": "Health",
 								"value": "1"
 							}
 						},
 						{
-							"id": "destroy",
-							"objectClass": "Apple",
-							"sid": 589944541073632
-						},
-						{
-							"id": "set-text",
-							"objectClass": "HealthText",
-							"sid": 277266012709772,
+							"id": "add-to-instvar",
+							"objectClass": "Player",
+							"sid": 369907344090569,
 							"parameters": {
-								"text": "\"Health: \" & Player.Health"
+								"instance-variable": "ApplesCollected",
+								"value": "1"
 							}
 						},
 						{
@@ -545,29 +546,6 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Player",
-							"sid": 997444868027501,
-							"parameters": {
-								"instance-variable": "Health",
-								"comparison": 3,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 770117958967739
-						}
-					],
-					"sid": 853142082663067
-				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -1160,8 +1138,8 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Obstacles",
-			"description": "Made this for the obstacle family which are objects that force the player to restart upon contact",
+			"title": "Game Conditions",
+			"description": "Win and Lose conditions",
 			"isActiveOnStart": true,
 			"children": [
 				{
@@ -1174,6 +1152,16 @@
 							"parameters": {
 								"object": "Obstacle"
 							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player",
+							"sid": 228434666910667,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 3,
+								"value": "0"
+							}
 						}
 					],
 					"actions": [
@@ -1183,7 +1171,34 @@
 							"sid": 804618001688454
 						}
 					],
-					"sid": 837193625735725
+					"sid": 837193625735725,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 375664372380247,
+							"parameters": {
+								"first-value": "GameManager.WinAmount",
+								"comparison": 3,
+								"second-value": "Player.ApplesCollected"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 422712002116478,
+							"parameters": {
+								"layout": "GameManager.NextLevel"
+							}
+						}
+					],
+					"sid": 693029859380936
 				}
 			],
 			"sid": 715893763735901

@@ -1,9 +1,22 @@
 {
-	"name": "Sprite",
+	"name": "GameManager",
 	"plugin-id": "Sprite",
 	"sid": 100523672083000,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "WinAmount",
+			"type": "number",
+			"desc": "",
+			"sid": 548198172119964
+		},
+		{
+			"name": "NextLevel",
+			"type": "string",
+			"desc": "",
+			"sid": 607534732718365
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -18,7 +31,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 13268,
+						"imageSpriteId": 9893717,
 						"useCollisionPoly": true,
 						"duration": 1
 					}

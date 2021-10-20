@@ -154,8 +154,9 @@
 					"uid": 9,
 					"instanceVariables": {
 						"HasSlingshot": false,
+						"CanDamage": false,
 						"Health": 3,
-						"CanDamage": false
+						"ApplesCollected": 0
 					},
 					"behaviors": {
 						"Platform": {
