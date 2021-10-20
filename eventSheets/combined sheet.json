@@ -1199,6 +1199,27 @@
 						}
 					],
 					"sid": 693029859380936
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "Home_Button",
+							"sid": 204731451584587
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 561070534240950,
+							"parameters": {
+								"layout": "Level 1"
+							}
+						}
+					],
+					"sid": 295924730587479
 				}
 			],
 			"sid": 715893763735901
