@@ -141,6 +141,11 @@
 								"x": "Player.X",
 								"y": "Player.Y - 25"
 							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "box",
+							"sid": 557331389270943
 						}
 					],
 					"actions": [],
@@ -1354,6 +1359,62 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "is-on-floor",
+									"objectClass": "ToddHoward",
+									"sid": 852442355318446,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [],
+							"sid": 514902673134084,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 246363592581875
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 287401480636700,
+											"parameters": {
+												"audio-file": "fallsound",
+												"loop": "not-looping",
+												"volume": "3",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 952169085080700,
+											"parameters": {
+												"seconds": "1.0"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "ToddHoward",
+											"sid": 831651616324721,
+											"parameters": {
+												"instance-variable": "HasFallen",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 977651563392467
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "pick-nearestfurthest",
 									"objectClass": "ToddHoward",
 									"sid": 895890650488481,
@@ -1361,6 +1422,16 @@
 										"which": "nearest",
 										"x": "Player.X",
 										"y": "Player.Y"
+									}
+								},
+								{
+									"id": "has-los-to-object",
+									"objectClass": "ToddHoward",
+									"sid": 156028535936667,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
 									}
 								}
 							],
@@ -1396,12 +1467,13 @@
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "compare-x",
-													"objectClass": "Player",
-													"sid": 876385527094926,
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 701637859492834,
 													"parameters": {
-														"comparison": 4,
-														"x-co-ordinate": "ToddHoward.X - 64"
+														"first-value": "abs(ToddHoward.X - Player.X)",
+														"comparison": 3,
+														"second-value": "10"
 													}
 												}
 											],
@@ -1505,40 +1577,6 @@
 													"sid": 872477727170964
 												}
 											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-on-floor",
-													"objectClass": "ToddHoward",
-													"sid": 376792727954346,
-													"behaviorType": "Platform"
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "ToddHoward",
-													"sid": 425733253720198,
-													"parameters": {
-														"instance-variable": "HasFallen",
-														"value": "true"
-													}
-												},
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 216276196837828,
-													"parameters": {
-														"audio-file": "fallsound",
-														"loop": "not-looping",
-														"volume": "3",
-														"tag-optional": "\"\""
-													}
-												}
-											],
-											"sid": 509568551453197
 										}
 									]
 								}

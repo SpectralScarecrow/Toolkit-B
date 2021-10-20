@@ -132,6 +132,12 @@
 							"properties": {
 								"enabled": true
 							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
 						}
 					},
 					"world": {
@@ -248,6 +254,12 @@
 								"enabled": true
 							}
 						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "horizontal",
@@ -297,6 +309,12 @@
 								"enabled": true
 							}
 						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "vertical",
@@ -309,12 +327,6 @@
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
 							}
 						}
 					},
@@ -439,6 +451,12 @@
 						"Jumpthru": {
 							"properties": {
 								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
 							}
 						}
 					},

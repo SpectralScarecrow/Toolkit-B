@@ -352,6 +352,12 @@
 								"enabled": true
 							}
 						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Platform"
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "vertical",
@@ -364,12 +370,6 @@
 								"magnitude-random": 0,
 								"enabled": true,
 								"live-preview": false
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": "Platform"
 							}
 						}
 					},
@@ -403,8 +403,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 601,
-						"y": 356,
+						"x": 449,
+						"y": 587,
 						"width": 42.95346318982905,
 						"height": 42.95346318982905,
 						"originX": 0.5,
@@ -456,6 +456,57 @@
 					}
 				},
 				{
+					"type": "Acid",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 174,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						}
+					},
+					"effects": {
+						"Water": {
+							"parameters": {
+								"speed": 0.1,
+								"x-speed": 0.3,
+								"y-speed": 0.3,
+								"intensity": 3,
+								"frequency": 4,
+								"angle": 7,
+								"delta": 20,
+								"reflectivity": 400,
+								"emboss": 0.3
+							}
+						}
+					},
+					"world": {
+						"x": 1422,
+						"y": 1326.5,
+						"width": 1114,
+						"height": 154,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "ToddHoward",
 					"properties": {
 						"initially-visible": true,
@@ -500,8 +551,8 @@
 						}
 					},
 					"world": {
-						"x": 596,
-						"y": 959,
+						"x": 614,
+						"y": 627,
 						"width": 71.168,
 						"height": 67.584,
 						"originX": 0.5,
@@ -531,6 +582,12 @@
 						"Jumpthru": {
 							"properties": {
 								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Platform"
 							}
 						}
 					},
@@ -987,17 +1044,17 @@
 						"LineOfSight": {
 							"properties": {
 								"obstacles": "solids",
-								"range": 100,
+								"range": 10000,
 								"cone-of-view": 360,
 								"use-collision-cells": true
 							}
 						}
 					},
 					"world": {
-						"x": 207.71476931567474,
-						"y": 839,
+						"x": 204,
+						"y": 773,
 						"width": 114.5975386313495,
-						"height": 108.82643956358369,
+						"height": 108.82643956358368,
 						"originX": 0.5,
 						"originY": 1,
 						"color": [
@@ -1025,6 +1082,12 @@
 						"Jumpthru": {
 							"properties": {
 								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Platform"
 							}
 						}
 					},
@@ -1061,6 +1124,12 @@
 							"properties": {
 								"enabled": true
 							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Platform"
+							}
 						}
 					},
 					"world": {
@@ -1068,6 +1137,211 @@
 						"y": 790,
 						"width": 194.4582217341298,
 						"height": 46.549844585004045,
+						"originX": 0.45768566493955093,
+						"originY": 0.527027027027027,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Apple",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 105,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 443,
+						"y": 842,
+						"width": 42.95346318982905,
+						"height": 42.95346318982905,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "box",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 125,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						},
+						"Platform": {
+							"properties": {
+								"max-speed": 330,
+								"acceleration": 1500,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 1028,
+						"y": 1228,
+						"width": 82,
+						"height": 82,
+						"originX": 0.48423423423423423,
+						"originY": 0.6425,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DanielRadcliffe",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 172,
+					"instanceVariables": {
+						"EnemyHealth": 3
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 330,
+								"acceleration": 1500,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 100,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": false,
+								"stop-on-solids": true,
+								"enabled": true
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "custom",
+								"range": 160,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 1257,
+						"y": 1098,
+						"width": 35.2,
+						"height": 23.04,
+						"originX": 0.509090909090909,
+						"originY": 0.5277777777777778,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Moving_Platform_Vertical",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 173,
+					"instanceVariables": {},
+					"behaviors": {
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": "Platform"
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 5,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 100,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 1254,
+						"y": 1160,
+						"width": 183.49386910739005,
+						"height": 43.92517329983855,
 						"originX": 0.45768566493955093,
 						"originY": 0.527027027027027,
 						"color": [
@@ -1093,10 +1367,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 828,
-						"y": 795,
-						"width": 20.999999999999993,
-						"height": 24,
+						"x": 837.8132613711039,
+						"y": 787.4075865470426,
+						"width": 29.355768609706097,
+						"height": 33.54944983966412,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1374,7 +1648,7 @@
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 2000,
-	"height": 2000,
+	"height": 1400,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
