@@ -1779,6 +1779,23 @@
 					"parameters": {
 						"text": "Player.ApplesCollected & \"/\" & GameManager.WinAmount"
 					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 922152426742716,
+					"parameters": {
+						"group-name": "\"Player Script\"",
+						"state": "activated"
+					}
+				},
+				{
+					"id": "scroll-to-object",
+					"objectClass": "System",
+					"sid": 134190173705533,
+					"parameters": {
+						"object": "Player"
+					}
 				}
 			],
 			"sid": 538304928954478,
