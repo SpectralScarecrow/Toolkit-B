@@ -1400,23 +1400,27 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 954533489053780
+									"id": "compare-y",
+									"objectClass": "ToddHoward",
+									"sid": 402310614623806,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "Player.Y"
+									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "ToddHoward",
-									"sid": 747470858649811,
+									"sid": 894613543577829,
 									"parameters": {
 										"instance-variable": "DealDamage",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 257901804434446
+							"sid": 425007236941875
 						},
 						{
 							"eventType": "block",
@@ -1456,11 +1460,11 @@
 								{
 									"id": "pick-nearestfurthest",
 									"objectClass": "ToddHoward",
-									"sid": 895890650488481,
+									"sid": 268676871127156,
 									"parameters": {
 										"which": "nearest",
 										"x": "Player.X",
-										"y": "Player.Y"
+										"y": "Player.Y - 50"
 									}
 								},
 								{
