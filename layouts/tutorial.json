@@ -1381,7 +1381,7 @@
 					"uid": 266,
 					"instanceVariables": {
 						"WinAmount": 2,
-						"NextLevel": "End_Screen"
+						"NextLevel": "Level 1"
 					},
 					"behaviors": {},
 					"world": {
