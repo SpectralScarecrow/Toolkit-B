@@ -1284,13 +1284,8 @@
 					},
 					"uid": 219,
 					"instanceVariables": {
-<<<<<<< HEAD:layouts/level 4.json
-						"WinAmount": 7,
-						"NextLevel": "End_Screen"
-=======
 						"WinAmount": 4,
 						"NextLevel": "Level 1"
->>>>>>> 98cee8b8ffe0d064f132f8b77bc34397b3cb5bf1:layouts/auc level 2.json
 					},
 					"behaviors": {},
 					"world": {

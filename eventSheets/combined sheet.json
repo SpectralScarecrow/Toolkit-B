@@ -408,17 +408,6 @@
 							"parameters": {
 								"text": "\"Health: \" & Player.Health"
 							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 838876003435179,
-							"parameters": {
-								"audio-file": "chime2_1",
-								"loop": "not-looping",
-								"volume": "-3",
-								"tag-optional": "\"\""
-							}
 						}
 					],
 					"sid": 734701550713497,
@@ -1224,76 +1213,13 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 794364914316335,
-							"parameters": {
-								"layout": "Start_Screen"
-							}
-						}
-					],
-					"sid": 295924730587479
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 909157819755806,
-							"parameters": {
-								"key": 82
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 225463622420543
-						}
-					],
-					"sid": 342258831708144
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-clicked",
-							"objectClass": "Start_Button",
-							"sid": 329745135207957
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 121920912059323,
+							"sid": 561070534240950,
 							"parameters": {
 								"layout": "Level 1"
 							}
 						}
 					],
-					"sid": 492512338362926
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 473454421039983
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 565774900906257,
-							"parameters": {
-								"layout": "Start_Screen"
-							}
-						}
-					],
-					"sid": 776027376092794
+					"sid": 295924730587479
 				}
 			],
 			"sid": 715893763735901
@@ -1335,11 +1261,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 151012450694729,
+							"sid": 294902632616369,
 							"parameters": {
 								"audio-file": "impact",
 								"loop": "not-looping",
-								"volume": "-3",
+								"volume": "3",
 								"tag-optional": "\"\""
 							}
 						}
@@ -1638,7 +1564,6 @@
 											"sid": 739594467956443
 										},
 										{
-<<<<<<< Updated upstream
 											"eventType": "block",
 											"conditions": [
 												{
@@ -1678,17 +1603,6 @@
 													"isOrBlock": true
 												}
 											]
-=======
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 706789754923552,
-											"parameters": {
-												"audio-file": "fallsound",
-												"loop": "not-looping",
-												"volume": "-3",
-												"tag-optional": "\"\""
-											}
->>>>>>> Stashed changes
 										}
 									]
 								}
@@ -1723,7 +1637,8 @@
 									}
 								}
 							],
-							"sid": 234733383371502
+							"sid": 234733383371502,
+							"disabled": true
 						}
 					],
 					"sid": 931557006278316
@@ -1744,19 +1659,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-<<<<<<< Updated upstream
 					"sid": 609836102468923,
 					"parameters": {
 						"audio-file": "looperman-l-0102056-0268125-strings-violas-stac-house-130",
 						"loop": "looping",
 						"volume": "-1",
-=======
-					"sid": 567643917852359,
-					"parameters": {
-						"audio-file": "looperman-l-0102056-0268125-strings-violas-stac-house-130",
-						"loop": "looping",
-						"volume": "-8",
->>>>>>> Stashed changes
 						"tag-optional": "\"\""
 					}
 				},
@@ -1780,6 +1687,73 @@
 				}
 			],
 			"sid": 538304928954478
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 574158040504377,
+					"parameters": {
+						"key": 82
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 965953609156771,
+					"parameters": {
+						"group-name": "\"Player Script\"",
+						"state": "deactivated"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 499470561653903,
+					"parameters": {
+						"object-to-create": "Particles",
+						"layer": "1",
+						"x": "Player.X",
+						"y": "Player.Y",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Player",
+					"sid": 352390739209518,
+					"parameters": {
+						"animation": "\"Shrink\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 175138078216480
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Player",
+					"sid": 381996194937037,
+					"parameters": {
+						"animation": "\"Shrink\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 944389722530952
+				}
+			],
+			"sid": 659604449977671
 		}
 	],
 	"sid": 343251894526628

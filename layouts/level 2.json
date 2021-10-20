@@ -104,7 +104,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						},
 						"Sine": {
@@ -159,7 +159,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						},
 						"Sine": {
@@ -311,7 +311,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						},
 						"Sine": {
@@ -366,7 +366,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						}
 					},
@@ -486,7 +486,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						}
 					},
@@ -527,7 +527,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						}
 					},
@@ -568,7 +568,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						}
 					},
@@ -609,7 +609,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						}
 					},
@@ -729,7 +729,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						},
 						"Sine": {
@@ -784,7 +784,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						}
 					},
@@ -825,7 +825,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						}
 					},
@@ -866,7 +866,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						},
 						"Sine": {
@@ -921,7 +921,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						}
 					},
@@ -945,7 +945,7 @@
 				{
 					"type": "DanielRadcliffe",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -967,7 +967,7 @@
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
-								"enabled": false
+								"enabled": true
 							}
 						},
 						"MoveTo": {
@@ -991,7 +991,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": false,
+								"enabled": true,
 								"tags": ""
 							}
 						}
@@ -1016,7 +1016,7 @@
 				{
 					"type": "DanielRadcliffe",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1038,7 +1038,7 @@
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
-								"enabled": false
+								"enabled": true
 							}
 						},
 						"MoveTo": {
@@ -1062,7 +1062,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": false,
+								"enabled": true,
 								"tags": ""
 							}
 						}
@@ -1087,7 +1087,7 @@
 				{
 					"type": "DanielRadcliffe",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1109,7 +1109,7 @@
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
-								"enabled": false
+								"enabled": true
 							}
 						},
 						"MoveTo": {
@@ -1133,7 +1133,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": false,
+								"enabled": true,
 								"tags": ""
 							}
 						}
@@ -1158,7 +1158,7 @@
 				{
 					"type": "DanielRadcliffe",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1180,7 +1180,7 @@
 								"double-jump": false,
 								"jump-sustain": 0,
 								"default-controls": false,
-								"enabled": false
+								"enabled": true
 							}
 						},
 						"MoveTo": {
@@ -1204,7 +1204,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": false,
+								"enabled": true,
 								"tags": ""
 							}
 						}
@@ -1296,7 +1296,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						}
 					},
@@ -1694,7 +1694,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
-								"tags": ""
+								"tags": "Platform"
 							}
 						}
 					},
@@ -2147,48 +2147,6 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "HealthText",
-					"properties": {
-						"text": "Health: 3",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 12,
-						"line-height": 0,
-						"bold": true,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 160,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 16.363636363636317,
-						"y": 75.99999167702448,
-						"width": 200,
-						"height": 30,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "GameManager",
 					"properties": {
 						"initially-visible": true,
@@ -2200,7 +2158,7 @@
 					"uid": 161,
 					"instanceVariables": {
 						"WinAmount": 9,
-						"NextLevel": "Level 3"
+						"NextLevel": ""
 					},
 					"behaviors": {},
 					"world": {

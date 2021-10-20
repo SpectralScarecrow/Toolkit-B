@@ -63,6 +63,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
@@ -185,8 +193,7 @@
 			"GameManager",
 			"End_Text",
 			"Home_Button",
-			"Start_Button",
-			"Control_Text"
+			"Particles"
 		],
 		"subfolders": [
 			{
@@ -263,7 +270,7 @@
 	},
 	"layouts": {
 		"items": [
-			"Start_Screen",
+			"Game Demo Level",
 			"Level 1",
 			"Level 2",
 			"Level 3",
@@ -309,11 +316,6 @@
 					"name": "mechanical_clicks04_2.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 686340334123608
-				},
-				{
-					"name": "chime2_1.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 979357906541383
 				}
 			],
 			"subfolders": []
