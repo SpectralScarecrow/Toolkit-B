@@ -310,6 +310,11 @@
 					"name": "mechanical_clicks04_2.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 686340334123608
+				},
+				{
+					"name": "chime2_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 979357906541383
 				}
 			],
 			"subfolders": []

@@ -408,6 +408,17 @@
 							"parameters": {
 								"text": "\"Health: \" & Player.Health"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 838876003435179,
+							"parameters": {
+								"audio-file": "chime2_1",
+								"loop": "not-looping",
+								"volume": "-3",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 734701550713497,
@@ -1261,11 +1272,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 294902632616369,
+							"sid": 151012450694729,
 							"parameters": {
 								"audio-file": "impact",
 								"loop": "not-looping",
-								"volume": "3",
+								"volume": "-3",
 								"tag-optional": "\"\""
 							}
 						}
@@ -1564,6 +1575,7 @@
 											"sid": 739594467956443
 										},
 										{
+<<<<<<< Updated upstream
 											"eventType": "block",
 											"conditions": [
 												{
@@ -1603,6 +1615,17 @@
 													"isOrBlock": true
 												}
 											]
+=======
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 706789754923552,
+											"parameters": {
+												"audio-file": "fallsound",
+												"loop": "not-looping",
+												"volume": "-3",
+												"tag-optional": "\"\""
+											}
+>>>>>>> Stashed changes
 										}
 									]
 								}
@@ -1658,11 +1681,19 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
+<<<<<<< Updated upstream
 					"sid": 609836102468923,
 					"parameters": {
 						"audio-file": "looperman-l-0102056-0268125-strings-violas-stac-house-130",
 						"loop": "looping",
 						"volume": "-1",
+=======
+					"sid": 567643917852359,
+					"parameters": {
+						"audio-file": "looperman-l-0102056-0268125-strings-violas-stac-house-130",
+						"loop": "looping",
+						"volume": "-8",
+>>>>>>> Stashed changes
 						"tag-optional": "\"\""
 					}
 				},
