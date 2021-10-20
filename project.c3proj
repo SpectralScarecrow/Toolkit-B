@@ -271,12 +271,12 @@
 	"layouts": {
 		"items": [
 			"Game Demo Level",
+			"Tutorial",
 			"Level 1",
 			"Level 2",
 			"Level 3",
 			"Level 4",
-			"End_Screen",
-			"Tutorial"
+			"End_Screen"
 		],
 		"subfolders": []
 	},
@@ -464,5 +464,5 @@
 	},
 	"viewportWidth": 854,
 	"viewportHeight": 480,
-	"firstLayout": "Level 1"
+	"firstLayout": "Tutorial"
 }
