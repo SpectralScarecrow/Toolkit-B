@@ -188,7 +188,7 @@
 			"PressurePlate",
 			"PressurePlateTrigger",
 			"Slingshot",
-			"Text",
+			"AppleText",
 			"TestText",
 			"GameManager",
 			"End_Text",

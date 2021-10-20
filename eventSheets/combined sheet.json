@@ -372,14 +372,9 @@
 					],
 					"actions": [
 						{
-							"id": "destroy",
-							"objectClass": "Apple",
-							"sid": 589944541073632
-						},
-						{
 							"id": "add-to-instvar",
 							"objectClass": "Player",
-							"sid": 820973151133954,
+							"sid": 857253295937252,
 							"parameters": {
 								"instance-variable": "Health",
 								"value": "1"
@@ -388,15 +383,28 @@
 						{
 							"id": "add-to-instvar",
 							"objectClass": "Player",
-							"sid": 369907344090569,
+							"sid": 674454290969243,
 							"parameters": {
 								"instance-variable": "ApplesCollected",
 								"value": "1"
 							}
 						},
 						{
+							"id": "set-text",
+							"objectClass": "AppleText",
+							"sid": 644328952244578,
+							"parameters": {
+								"text": "Player.ApplesCollected & \"/\" & GameManager.WinAmount"
+							}
+						},
+						{
 							"callFunction": "AddHearts",
 							"sid": 688121035887465
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Apple",
+							"sid": 737221058973525
 						}
 					],
 					"sid": 576815846895938
@@ -1198,17 +1206,86 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 693029859380936,
+					"children": [
 						{
-							"id": "go-to-layout-by-name",
-							"objectClass": "System",
-							"sid": 422712002116478,
-							"parameters": {
-								"layout": "GameManager.NextLevel"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 518666162292876
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 271718029028043,
+									"parameters": {
+										"group-name": "\"Player Script\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Player",
+									"sid": 123562327421873,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 954829793421525,
+									"parameters": {
+										"object-to-create": "Particles",
+										"layer": "1",
+										"x": "Player.X",
+										"y": "Player.Y",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Player",
+									"sid": 882797872147982,
+									"parameters": {
+										"animation": "\"Shrink\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 363136853194748
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-animation-finished",
+									"objectClass": "Player",
+									"sid": 293660147770871,
+									"parameters": {
+										"animation": "\"Shrink\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout-by-name",
+									"objectClass": "System",
+									"sid": 176152602333459,
+									"parameters": {
+										"layout": "GameManager.NextLevel"
+									}
+								}
+							],
+							"sid": 333772767004541
 						}
-					],
-					"sid": 693029859380936
+					]
 				},
 				{
 					"eventType": "block",
@@ -1694,9 +1771,56 @@
 						"mode": "exclusive",
 						"tags": "\"Platform\""
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "AppleText",
+					"sid": 258998633850351,
+					"parameters": {
+						"text": "Player.ApplesCollected & \"/\" & GameManager.WinAmount"
+					}
 				}
 			],
-			"sid": 538304928954478
+			"sid": 538304928954478,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 618085836444796,
+							"parameters": {
+								"variable": "Restarted"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 696796985850289,
+							"parameters": {
+								"object-to-create": "Particles",
+								"layer": "1",
+								"x": "Player.X",
+								"y": "Player.Y",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 991813932085849,
+							"parameters": {
+								"variable": "Restarted",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 440339856811996
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -1749,6 +1873,15 @@
 						"animation": "\"Shrink\"",
 						"from": "beginning"
 					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 907401513297135,
+					"parameters": {
+						"variable": "Restarted",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 175138078216480
@@ -1763,33 +1896,11 @@
 					"parameters": {
 						"animation": "\"Shrink\""
 					}
-				}
-			],
-			"actions": [
-				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 944389722530952
 				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 422028449632925,
-					"parameters": {
-						"variable": "Restarted",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 659604449977671
-		},
-		{
-			"eventType": "block",
-			"conditions": [
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 365867006290210,
+					"sid": 297252817467756,
 					"parameters": {
 						"variable": "Restarted"
 					}
@@ -1797,28 +1908,12 @@
 			],
 			"actions": [
 				{
-					"id": "create-object",
+					"id": "restart-layout",
 					"objectClass": "System",
-					"sid": 764554649092407,
-					"parameters": {
-						"object-to-create": "Particles",
-						"layer": "1",
-						"x": "Player.X",
-						"y": "Player.Y",
-						"create-hierarchy": false
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 121235256451648,
-					"parameters": {
-						"variable": "Restarted",
-						"value": "false"
-					}
+					"sid": 944389722530952
 				}
 			],
-			"sid": 697454485869095
+			"sid": 659604449977671
 		}
 	],
 	"sid": 343251894526628

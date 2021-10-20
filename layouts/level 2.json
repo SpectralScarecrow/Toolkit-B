@@ -388,35 +388,6 @@
 					}
 				},
 				{
-					"type": "Apple",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 113,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 287,
-						"y": 861,
-						"width": 42.95346318982905,
-						"height": 42.95346318982905,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "box",
 					"properties": {
 						"initially-visible": false,
@@ -1438,8 +1409,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 279,
-						"y": 1230,
+						"x": 320,
+						"y": 899,
 						"width": 42.95346318982905,
 						"height": 42.95346318982905,
 						"originX": 0.5,
@@ -1767,35 +1738,6 @@
 					}
 				},
 				{
-					"type": "Apple",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 150,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": -78,
-						"y": 376,
-						"width": 42.95346318982905,
-						"height": 42.95346318982905,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Acid",
 					"properties": {
 						"initially-visible": true,
@@ -2086,6 +2028,35 @@
 					}
 				},
 				{
+					"type": "Apple",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 113,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 257,
+						"y": 1207,
+						"width": 42.95346318982905,
+						"height": 42.95346318982905,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "Slingshot",
 					"properties": {
 						"initially-visible": true,
@@ -2158,7 +2129,7 @@
 					"uid": 161,
 					"instanceVariables": {
 						"WinAmount": 9,
-						"NextLevel": ""
+						"NextLevel": "Level 3"
 					},
 					"behaviors": {},
 					"world": {
@@ -2255,6 +2226,77 @@
 						"height": 60,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Apple",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 150,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 39,
+						"y": 109,
+						"width": 65.83205379396982,
+						"height": 65.83205379396982,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "AppleText",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 32,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 23,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 74,
+						"y": 80,
+						"width": 98,
+						"height": 61,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
